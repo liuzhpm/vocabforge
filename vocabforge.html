@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0D0D0D">
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- SEO -->
+<title>VocabForge — Learn English Vocabulary Fast</title>
+<meta name="description" content="Interactive English vocabulary builder with flashcards, quizzes, AI coaching, and Chinese translations. Master business and everyday American English.">
+<meta name="keywords" content="vocabulary, English learning, flashcards, business English, ESL, Chinese English, 英语学习, 背单词">
+<meta name="author" content="VocabForge">
+
+<!-- Open Graph (social sharing) -->
+<meta property="og:title" content="VocabForge — Learn English Vocabulary Fast">
+<meta property="og:description" content="Flashcards, quizzes, AI coaching. Master business and everyday English with smart spaced repetition.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%230D0D0D'/%3E%3Ctext x='600' y='280' text-anchor='middle' font-family='Arial' font-size='120' font-weight='800'%3E%3Ctspan fill='%23E8A838'%3EVocab%3C/tspan%3E%3Ctspan fill='%23D94F4F'%3EForge%3C/tspan%3E%3C/text%3E%3Ctext x='600' y='380' text-anchor='middle' font-family='Arial' font-size='36' fill='%239198AB'%3ELearn English Vocabulary Fast%3C/text%3E%3C/svg%3E">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VocabForge — Learn English Vocabulary Fast">
+<meta name="twitter:description" content="Flashcards, quizzes, AI coaching. Master business and everyday English.">
+
+<!-- Favicon (inline SVG) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23E8A838'/%3E%3Cstop offset='100%25' stop-color='%23D94F4F'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230D0D0D'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial' font-weight='800' font-size='36' fill='url(%23g)'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23E8A838'/%3E%3Cstop offset='100%25' stop-color='%23D94F4F'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='180' height='180' rx='40' fill='%230D0D0D'/%3E%3Ctext x='90' y='125' text-anchor='middle' font-family='Arial' font-weight='800' font-size='100' fill='url(%23g)'%3EV%3C/text%3E%3C/svg%3E">
+
+<!-- PWA Manifest -->
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiVm9jYWJGb3JnZSAtIExlYXJuIEVuZ2xpc2giLCJzaG9ydF9uYW1lIjoiVm9jYWJGb3JnZSIsInN0YXJ0X3VybCI6Ii4iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsImJhY2tncm91bmRfY29sb3IiOiIjMEQwRDBEIiwidGhlbWVfY29sb3IiOiIjMEQwRDBEIiwib3JpZW50YXRpb24iOiJwb3J0cmFpdCIsImNhdGVnb3JpZXMiOlsiZWR1Y2F0aW9uIl0sImRlc2NyaXB0aW9uIjoiSW50ZXJhY3RpdmUgRW5nbGlzaCB2b2NhYnVsYXJ5IGJ1aWxkZXIgd2l0aCBmbGFzaGNhcmRzLCBxdWl6emVzLCBhbmQgQUkgY29hY2hpbmcuIiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbCwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgNTEyIDUxMiclM0UlM0NyZWN0IHdpZHRoPSc1MTInIGhlaWdodD0nNTEyJyByeD0nMTAwJyBmaWxsPSclMjMwRDBEMEQnLyUzRSUzQ3RleHQgeD0nMjU2JyB5PSczNTAnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC13ZWlnaHQ9JzgwMCcgZm9udC1zaXplPScyODAnIGZpbGw9JyUyM0U4QTgzOCclM0VWJTNDL3RleHQlM0UlM0Mvc3ZnJTNFIiwic2l6ZXMiOiI1MTJ4NTEyIiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJwdXJwb3NlIjoiYW55IG1hc2thYmxlIn1dfQ==">
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0D0D0D;
+    --bg-grad-1: #0D0D0D;
+    --bg-grad-2: #1A1A2E;
+    --bg-grad-3: #16213E;
+    --text: #E8E8E8;
+    --text-secondary: #9198AB;
+    --text-muted: #555;
+    --text-defn: #D0D0DC;
+    --text-syn: #A8ADBE;
+    --surface: rgba(255,255,255,0.04);
+    --surface-border: rgba(255,255,255,0.07);
+    --surface-hover: rgba(255,255,255,0.06);
+    --card-bg: rgba(255,255,255,0.04);
+    --card-border: rgba(255,255,255,0.08);
+    --progress-bg: rgba(255,255,255,0.08);
+    --btn-outline-bg: rgba(255,255,255,0.08);
+    --btn-outline-border: rgba(255,255,255,0.14);
+    --btn-outline-text: #E8E8E8;
+    --quiz-opt-bg: rgba(255,255,255,0.03);
+    --quiz-opt-border: rgba(255,255,255,0.1);
+    --syn-bg: rgba(255,255,255,0.06);
+    --input-bg: rgba(255,255,255,0.06);
+    --input-border: rgba(255,255,255,0.1);
+    --divider: rgba(255,255,255,0.06);
+  }
+
+  body.light {
+    --bg: #F7F7FA;
+    --bg-grad-1: #F7F7FA;
+    --bg-grad-2: #EDEEF3;
+    --bg-grad-3: #E4E7EE;
+    --text: #1A1A2E;
+    --text-secondary: #5F6575;
+    --text-muted: #9CA3AF;
+    --text-defn: #333B4D;
+    --text-syn: #5F6575;
+    --surface: rgba(255,255,255,0.7);
+    --surface-border: rgba(0,0,0,0.07);
+    --surface-hover: rgba(0,0,0,0.04);
+    --card-bg: rgba(255,255,255,0.88);
+    --card-border: rgba(0,0,0,0.08);
+    --progress-bg: rgba(0,0,0,0.07);
+    --btn-outline-bg: rgba(0,0,0,0.05);
+    --btn-outline-border: rgba(0,0,0,0.16);
+    --btn-outline-text: #333B4D;
+    --quiz-opt-bg: rgba(255,255,255,0.88);
+    --quiz-opt-border: rgba(0,0,0,0.1);
+    --syn-bg: rgba(0,0,0,0.05);
+    --input-bg: rgba(255,255,255,0.95);
+    --input-border: rgba(0,0,0,0.12);
+    --divider: rgba(0,0,0,0.06);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; -webkit-tap-highlight-color: transparent; }
+  body {
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(165deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 50%, var(--bg-grad-3) 100%);
+    z-index: -1;
+  }
+  .zh-font { font-family: 'Noto Sans SC', sans-serif; }
+
+  /* ─── LAYOUT ─── */
+  .page-pad { padding-left: 24px; padding-right: 24px; }
+  .header { padding: 28px 24px 8px; display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; background: linear-gradient(135deg, #E8A838, #D94F4F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .stats-box { background: var(--surface); border-radius: 14px; padding: 10px 16px; border: 1px solid var(--surface-border); text-align: right; }
+  .stat-num { font-size: 22px; font-weight: 700; color: #3DBB6E; }
+  .stat-num span { font-size: 14px; color: var(--text-secondary); }
+  .stat-label { font-size: 10px; color: var(--text-secondary); letter-spacing: 1px; text-transform: uppercase; }
+
+  /* ─── ACTION BAR ─── */
+  .action-bar {
+    display: flex; gap: 8px; padding: 10px 24px 6px; flex-wrap: wrap; align-items: center;
+  }
+  .action-bar .divider { width: 1px; height: 20px; background: var(--divider); margin: 0 2px; }
+
+  .toolbar { display: flex; justify-content: flex-end; padding: 6px 24px 10px; }
+  .grid { padding: 6px 24px 24px; display: flex; flex-direction: column; gap: 14px; }
+
+  /* ─── SECTION LABEL ─── */
+  .section-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--text-secondary); padding: 0 24px; margin: 16px 0 6px;
+  }
+
+  /* ─── CATEGORY CARDS ─── */
+  .cat-card { border-radius: 18px; padding: 20px; transition: all 0.25s ease; position: relative; overflow: hidden; }
+  .cat-icon { font-size: 28px; margin-bottom: 8px; }
+  .cat-label { font-size: 17px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.3px; }
+  .cat-count { font-size: 13px; color: var(--text-secondary); }
+  .progress-bar { height: 3px; border-radius: 2px; background: var(--progress-bg); margin-top: 12px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 2px; transition: width 0.5s ease; }
+  .actions { display: flex; gap: 8px; margin-top: 14px; }
+
+  /* ─── BUTTONS ─── */
+  .btn {
+    padding: 10px 20px; border-radius: 12px; border: none; color: #fff;
+    font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit;
+    transition: transform 0.15s, opacity 0.15s; line-height: 1.3;
+  }
+  .btn-sm { padding: 7px 14px; font-size: 12px; border-radius: 10px; }
+  .btn:hover { transform: scale(1.02); }
+  .btn:active { transform: scale(0.97); }
+  .btn:disabled { opacity: 0.35; cursor: default; transform: none; }
+  .back-btn {
+    background: none; border: none; color: var(--text-secondary); font-size: 15px;
+    cursor: pointer; padding: 14px 24px; font-family: inherit;
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  /* ─── FLASHCARD ─── */
+  .flashcard {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 22px; padding: 40px 28px; margin: 8px 24px; min-height: 300px;
+    display: flex; flex-direction: column; justify-content: center;
+    cursor: pointer; position: relative;
+  }
+  .word-display { font-size: 34px; font-weight: 800; text-align: center; letter-spacing: -1px; line-height: 1.2; }
+  .phonetic { font-size: 15px; color: var(--text-secondary); text-align: center; margin-top: 10px; font-style: italic; font-weight: 300; }
+  .pos { font-size: 11px; color: #E8A838; text-align: center; margin-top: 8px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+  .zh-line { font-size: 20px; color: #D4A03A; text-align: center; margin-top: 14px; font-weight: 700; }
+  .defn { font-size: 15px; line-height: 1.7; color: var(--text-defn); margin-top: 20px; text-align: center; }
+  .example { font-size: 14px; color: var(--text-secondary); margin-top: 16px; text-align: center; font-style: italic; padding: 0 4px; line-height: 1.6; }
+  .synonyms { display: flex; justify-content: center; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+  .syn-tag { padding: 5px 14px; border-radius: 20px; background: var(--syn-bg); font-size: 13px; color: var(--text-syn); }
+  .tap-hint { position: absolute; bottom: 18px; width: 100%; text-align: center; font-size: 13px; color: var(--text-muted); left: 0; }
+  .card-actions { display: flex; gap: 10px; padding: 14px 24px; justify-content: center; }
+  .counter { text-align: center; padding: 10px; font-size: 13px; color: var(--text-secondary); font-weight: 500; }
+  .mastery-badge { display: inline-block; padding: 4px 12px; border-radius: 8px; font-size: 11px; font-weight: 600; }
+  .zh-badge { padding: 4px 14px; border-radius: 8px; font-size: 14px; font-weight: 600; background: rgba(232,168,56,0.1); color: #D4A03A; border: 1px solid rgba(232,168,56,0.2); }
+
+  /* ─── QUIZ ─── */
+  .quiz-option {
+    padding: 16px 20px; border-radius: 14px; cursor: pointer;
+    font-size: 15px; line-height: 1.55; color: var(--text-defn); transition: all 0.2s;
+    text-align: left; font-family: inherit; border: 1px solid var(--quiz-opt-border);
+    background: var(--quiz-opt-bg);
+  }
+  .quiz-option:hover { background: var(--surface-hover); }
+  .quiz-option.correct { border-color: #3DBB6E; background: rgba(61,187,110,0.12); }
+  .quiz-option.wrong { border-color: #D94F4F; background: rgba(217,79,79,0.12); }
+  .quiz-option.answered { cursor: default; }
+  .quiz-result { text-align: center; padding: 48px 24px; }
+  .result-score { font-size: 56px; font-weight: 800; }
+  .result-label { font-size: 15px; color: var(--text-secondary); margin-top: 6px; }
+
+  /* ─── THEME SWITCHER ─── */
+  .theme-switcher {
+    display: inline-flex; border-radius: 10px; overflow: hidden;
+    border: 1px solid var(--surface-border); background: var(--surface);
+  }
+  .theme-switcher button {
+    padding: 5px 12px; border: none; background: transparent;
+    color: var(--text-secondary); font-size: 12px; font-weight: 600;
+    cursor: pointer; font-family: inherit; transition: all 0.2s;
+  }
+  .theme-switcher button.active {
+    background: rgba(232,168,56,0.2); color: #E8A838;
+  }
+
+  /* ─── COLLAPSIBLE CARD ─── */
+  .collapse-card {
+    margin: 0 24px 10px; padding: 14px 18px; border-radius: 14px;
+    background: var(--surface); border: 1px solid var(--surface-border);
+    cursor: pointer; transition: all 0.2s;
+  }
+  .collapse-card:hover { border-color: var(--btn-outline-border); }
+  .collapse-card-title { font-size: 14px; font-weight: 600; }
+  .collapse-card-sub { font-size: 12px; color: var(--text-secondary); margin-top: 3px; line-height: 1.5; }
+  .collapse-arrow { font-size: 11px; color: var(--text-secondary); transition: transform 0.2s; }
+  .collapse-body {
+    margin: 0 24px 12px; padding: 18px; border-radius: 14px;
+    background: var(--surface); border: 1px solid var(--surface-border);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes slideIn { from { opacity:0; transform: translateX(60px); } to { opacity:1; transform: translateX(0); } }
+  @keyframes slideOut { from { opacity:1; transform: translateX(0); } to { opacity:0; transform: translateX(-60px); } }
+  @keyframes slideInLeft { from { opacity:0; transform: translateX(-60px); } to { opacity:1; transform: translateX(0); } }
+  @keyframes slideOutRight { from { opacity:1; transform: translateX(0); } to { opacity:0; transform: translateX(60px); } }
+  @keyframes fadeIn { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform: translateY(0); } }
+  @keyframes expandIn { from { opacity:0; max-height:0; transform:translateY(-8px); } to { opacity:1; max-height:2000px; transform:translateY(0); } }
+  @keyframes collapseOut { from { opacity:1; max-height:2000px; transform:translateY(0); } to { opacity:0; max-height:0; transform:translateY(-8px); } }
+  @keyframes popIn { from { opacity:0; transform:scale(0.95) translateY(6px); } to { opacity:1; transform:scale(1) translateY(0); } }
+
+  .anim-expand { animation: expandIn 0.3s ease forwards; overflow: hidden; }
+  .anim-collapse { animation: collapseOut 0.2s ease forwards; overflow: hidden; }
+  .anim-pop { animation: popIn 0.25s ease forwards; }
+  .anim-fade { animation: fadeIn 0.3s ease forwards; }
+
+  /* ─── THEMED UTILITIES ─── */
+  .input-themed {
+    padding: 11px 14px; border-radius: 10px; font-family: inherit; font-size: 14px;
+    background: var(--input-bg); border: 1px solid var(--input-border); color: var(--text);
+  }
+  .panel-themed {
+    margin: 0 24px 12px; padding: 18px; border-radius: 14px;
+    background: var(--surface); border: 1px solid var(--surface-border);
+  }
+  .btn-outline {
+    background: var(--btn-outline-bg) !important;
+    border: 1px solid var(--btn-outline-border) !important;
+    color: var(--btn-outline-text) !important;
+  }
+  .guide-panel {
+    margin: 0 24px 28px; padding: 20px; border-radius: 16px;
+    background: var(--surface); border: 1px solid var(--surface-border);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  /* Small phones (≤380px) */
+  @media (max-width: 380px) {
+    .header { padding: 20px 16px 6px; }
+    .action-bar { padding: 8px 16px 4px; }
+    .grid { padding: 6px 16px 20px; }
+    .flashcard { padding: 28px 18px; margin: 6px 16px; min-height: 260px; }
+    .card-actions { padding: 12px 16px; }
+    .word-display { font-size: 28px; }
+    .defn { font-size: 14px; }
+    .collapse-card { margin: 0 16px 8px; padding: 12px 14px; }
+    .collapse-body { margin: 0 16px 10px; padding: 14px; }
+    .panel-themed { margin: 0 16px 10px; padding: 14px; }
+    .guide-panel { margin: 0 16px 24px; padding: 16px; }
+    .cat-card { padding: 16px; }
+    .quiz-option { padding: 14px 16px; font-size: 14px; }
+    .btn { padding: 9px 16px; font-size: 13px; }
+    .btn-sm { padding: 6px 10px; font-size: 11px; }
+    .theme-switcher button { padding: 4px 8px; font-size: 11px; }
+  }
+
+  /* Standard phones (381–480px) */
+  @media (min-width: 381px) and (max-width: 480px) {
+    .flashcard { min-height: 280px; }
+  }
+
+  /* Tablets (481–768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .header { padding: 32px 32px 10px; }
+    .action-bar { padding: 10px 32px 6px; }
+    .grid { padding: 6px 32px 28px; max-width: 600px; margin: 0 auto; }
+    .flashcard { margin: 8px 32px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .card-actions { max-width: 560px; margin: 0 auto; padding: 14px 32px; }
+    .collapse-card { margin: 0 32px 10px; }
+    .collapse-body { margin: 0 32px 12px; }
+    .panel-themed { margin: 0 32px 12px; }
+    .guide-panel { margin: 0 32px 28px; }
+  }
+
+  /* Desktop (769px+) */
+  @media (min-width: 769px) {
+    body { display: flex; justify-content: center; }
+    #view-home, #view-flashcards, #view-quiz, #view-quiz-result {
+      max-width: 520px; width: 100%; margin: 0 auto;
+    }
+    .header { padding: 36px 0 10px; }
+    .action-bar { padding: 10px 0 6px; }
+    .grid { padding: 6px 0 28px; }
+    .flashcard { margin: 8px 0; }
+    .card-actions { padding: 14px 0; }
+    .collapse-card { margin: 0 0 10px; }
+    .collapse-body { margin: 0 0 12px; }
+    .panel-themed { margin: 0 0 12px; }
+    .guide-panel { margin: 0 0 28px; }
+    .counter { padding: 10px 0; }
+    .back-btn { padding: 14px 0; }
+    .quiz-option { font-size: 15px; }
+  }
+
+  /* Safe area insets for notched phones */
+  @supports (padding-top: env(safe-area-inset-top)) {
+    .header { padding-top: calc(28px + env(safe-area-inset-top)); }
+    body { padding-bottom: env(safe-area-inset-bottom); }
+  }
+
+  /* Touch target sizing */
+  @media (pointer: coarse) {
+    .btn { min-height: 44px; }
+    .btn-sm { min-height: 36px; }
+    .quiz-option { min-height: 48px; }
+    .collapse-card { min-height: 44px; }
+    .back-btn { min-height: 44px; }
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  /* ─── HIDDEN ─── */
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HOME VIEW ═══════════ -->
+<div id="view-home">
+  <div class="header">
+    <div class="logo">VocabForge</div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="theme-switcher">
+        <button onclick="setTheme('auto')" id="theme-auto">Auto</button>
+        <button onclick="setTheme('light')" id="theme-light">Light</button>
+        <button onclick="setTheme('dark')" id="theme-dark">Dark</button>
+      </div>
+      <div class="stats-box">
+        <div class="stat-num"><span id="mastered-count">0</span><span>/<span id="total-count">32</span></span></div>
+        <div class="stat-label">Mastered</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTION BAR: all quick actions in one row -->
+  <div class="action-bar">
+    <button class="btn btn-sm btn-outline" onclick="showCategoryManager()">⚙ Categories</button>
+    <button class="btn btn-sm" style="background:linear-gradient(135deg,rgba(155,89,182,0.7),rgba(79,155,217,0.7))" onclick="showGeneratePanel()">+ New Words</button>
+    <div style="flex:1"></div>
+    <span style="font-size:12px;color:var(--text-secondary)">📚 Pool refills weekly</span>
+  </div>
+
+  <!-- QUICK PROMPTS: No idea + AI Coach in a clean row -->
+  <div style="display:flex;gap:10px;padding:8px 24px 4px">
+    <div class="collapse-card" style="flex:1;margin:0" onclick="toggleScenePanel()">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div class="collapse-card-title" style="color:#E8A838">💡 Explore scenes</div>
+        <span id="scene-arrow" class="collapse-arrow">▼</span>
+      </div>
+    </div>
+    <div class="collapse-card" style="flex:1;margin:0" onclick="toggleCoachPanel()">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div class="collapse-card-title" style="color:#9B59B6">🧠 AI Coach</div>
+        <span id="coach-arrow" class="collapse-arrow">▼</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE PANEL (hidden by default) -->
+  <div id="scene-panel" class="hidden collapse-body">
+    <div style="font-size:14px;font-weight:600;margin-bottom:12px">Pick a scene or describe your own:</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+      <button class="btn btn-sm" onclick="pickScene('Travel Abroad','✈️','Airports, hotels, directions, ordering food, small talk with locals')" style="background:rgba(79,155,217,0.12);border:1px solid rgba(79,155,217,0.25);color:#4F9BD9">✈️ Travel</button>
+      <button class="btn btn-sm" onclick="pickScene('Business Negotiations','🤝','Deal-making, contracts, pricing, terms, closing')" style="background:rgba(155,89,182,0.12);border:1px solid rgba(155,89,182,0.25);color:#9B59B6">🤝 Negotiate</button>
+      <button class="btn btn-sm" onclick="pickScene('Job Interviews','🎯','Self-intro, strengths, salary, culture fit, follow-up')" style="background:rgba(61,187,110,0.12);border:1px solid rgba(61,187,110,0.25);color:#3DBB6E">🎯 Interviews</button>
+      <button class="btn btn-sm" onclick="pickScene('Trade Shows','🎪','Booth setup, networking, pitching, collecting leads')" style="background:rgba(232,168,56,0.12);border:1px solid rgba(232,168,56,0.25);color:#E8A838">🎪 Trade Shows</button>
+      <button class="btn btn-sm" onclick="pickScene('Client Meetings','☕','Agenda, presenting, Q&A, objections, next steps')" style="background:rgba(217,79,79,0.12);border:1px solid rgba(217,79,79,0.25);color:#D94F4F">☕ Meetings</button>
+      <button class="btn btn-sm" onclick="pickScene('Social Events','🍸','Small talk, introductions, hobbies, compliments')" style="background:rgba(79,155,217,0.12);border:1px solid rgba(79,155,217,0.25);color:#4F9BD9">🍸 Social</button>
+      <button class="btn btn-sm" onclick="pickScene('Email & Slack','💬','Greetings, requests, follow-ups, tone, sign-offs')" style="background:rgba(155,89,182,0.12);border:1px solid rgba(155,89,182,0.25);color:#9B59B6">💬 Email</button>
+      <button class="btn btn-sm" onclick="pickScene('Supply Chain','📦','Shipping, customs, inventory, lead time, logistics')" style="background:rgba(61,187,110,0.12);border:1px solid rgba(61,187,110,0.25);color:#3DBB6E">📦 Supply</button>
+    </div>
+    <div style="display:flex;gap:8px">
+      <input id="scene-custom" type="text" placeholder="Or type: presenting to investors..." class="input-themed" style="flex:1">
+      <button class="btn btn-sm" style="background:rgba(232,168,56,0.7);white-space:nowrap" onclick="generateScene()">Build It</button>
+    </div>
+    <div id="scene-status" style="margin-top:8px;font-size:13px;color:var(--text-secondary);text-align:center"></div>
+  </div>
+
+  <!-- AI COACH PANEL (hidden by default) -->
+  <div id="coach-panel" class="hidden collapse-body">
+    <div id="coach-content" style="font-size:14px;color:var(--text-defn);line-height:1.6">
+      <div style="text-align:center;color:var(--text-secondary)">Loading your profile...</div>
+    </div>
+  </div>
+
+  <!-- CATEGORY MANAGER -->
+  <div id="cat-manager" class="hidden panel-themed">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <div style="font-size:15px;font-weight:700">⚙ Manage Categories</div>
+      <button class="btn btn-outline" style="font-size:12px;padding:5px 12px" onclick="hideCategoryManager()">✕ Close</button>
+    </div>
+    <div id="cat-manager-list" style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px"></div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--text-secondary)">Create New Category</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;gap:8px">
+          <input id="new-cat-icon" type="text" placeholder="📝" maxlength="2" class="input-themed" style="width:50px;font-size:18px;text-align:center">
+          <input id="new-cat-name" type="text" placeholder="Category name" class="input-themed" style="flex:1">
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:12px;color:var(--text-secondary)">Color:</span>
+          <input id="new-cat-color" type="color" value="#E07C24" style="width:36px;height:36px;border:none;border-radius:8px;cursor:pointer;background:transparent">
+          <button class="btn" style="background:rgba(61,187,110,0.7);flex:1;font-size:13px" onclick="createCategory()">+ Add Category</button>
+        </div>
+      </div>
+      <div id="cat-manager-status" style="margin-top:8px;font-size:13px;text-align:center"></div>
+    </div>
+  </div>
+  <div id="generate-panel" class="hidden" style="margin:0 28px 16px;padding:20px;background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.2);border-radius:16px">
+    <div style="font-size:15px;font-weight:700;margin-bottom:12px">🔄 Generate New Vocabulary</div>
+    <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">AI will create fresh words for any category. Great for weekly updates!</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
+      <select id="gen-category" class="input-themed">
+      </select>
+      <input id="gen-topic" type="text" placeholder="Optional topic: e.g. trade shows, supply chain..." class="input-themed">
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn" style="background:rgba(155,89,182,0.7);flex:1" onclick="generateWords()">Generate 5 Words</button>
+      <button class="btn btn-outline" onclick="hideGeneratePanel()">Cancel</button>
+    </div>
+    <div id="gen-status" style="margin-top:10px;font-size:13px;color:var(--text-secondary);text-align:center"></div>
+  </div>
+  <div class="grid" id="category-grid"></div>
+
+  <!-- USER GUIDE -->
+  <div class="guide-panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;cursor:pointer" onclick="toggleGuide()">
+      <div style="font-size:16px;font-weight:700">📖 How It Works</div>
+      <span id="guide-arrow" style="font-size:14px;color:var(--text-secondary);transition:transform 0.2s">▼</span>
+    </div>
+    <div id="guide-content" class="hidden" style="margin-top:16px">
+
+      <div style="margin-bottom:18px">
+        <div style="font-size:13px;font-weight:700;color:#E8A838;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Mastery System</div>
+        <div style="font-size:14px;color:var(--text-defn);line-height:1.7">
+          Every word starts at <span class="mastery-badge" style="color:#6B7280;background:rgba(107,114,128,0.15);font-size:11px">New</span> with 0 points. Points move your words through four levels:
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">
+          <div style="flex:1;min-width:120px;padding:10px 14px;border-radius:12px;background:rgba(107,114,128,0.08);border:1px solid rgba(107,114,128,0.15)">
+            <span class="mastery-badge" style="color:#6B7280;background:rgba(107,114,128,0.2);font-size:11px">New</span>
+            <div style="font-size:12px;color:var(--text-secondary);margin-top:6px">0 pts</div>
+          </div>
+          <div style="flex:1;min-width:120px;padding:10px 14px;border-radius:12px;background:rgba(232,168,56,0.06);border:1px solid rgba(232,168,56,0.15)">
+            <span class="mastery-badge" style="color:#E8A838;background:rgba(232,168,56,0.2);font-size:11px">Learning</span>
+            <div style="font-size:12px;color:var(--text-secondary);margin-top:6px">1+ pts</div>
+          </div>
+          <div style="flex:1;min-width:120px;padding:10px 14px;border-radius:12px;background:rgba(79,155,217,0.06);border:1px solid rgba(79,155,217,0.15)">
+            <span class="mastery-badge" style="color:#4F9BD9;background:rgba(79,155,217,0.2);font-size:11px">Familiar</span>
+            <div style="font-size:12px;color:var(--text-secondary);margin-top:6px">3+ pts</div>
+          </div>
+          <div style="flex:1;min-width:120px;padding:10px 14px;border-radius:12px;background:rgba(61,187,110,0.06);border:1px solid rgba(61,187,110,0.15)">
+            <span class="mastery-badge" style="color:#3DBB6E;background:rgba(61,187,110,0.2);font-size:11px">Mastered</span>
+            <div style="font-size:12px;color:var(--text-secondary);margin-top:6px">5+ pts</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:18px">
+        <div style="font-size:13px;font-weight:700;color:#3DBB6E;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Scoring</div>
+        <div style="font-size:14px;color:var(--text-defn);line-height:1.8">
+          <span style="color:#3DBB6E;font-weight:600">✓ Got It</span> or correct quiz → <span style="color:#3DBB6E;font-weight:700">+2 pts</span><br>
+          <span style="color:#D94F4F;font-weight:600">✕ Still Learning</span> or wrong quiz → <span style="color:#D94F4F;font-weight:700">−1 pt</span><br>
+          <span style="color:#E8A838;font-weight:600">💡 Show Chinese</span> hint → <span style="color:#D94F4F;font-weight:700">−0.5 pts</span> and Got It is locked<br>
+          <span style="color:var(--text-secondary);font-weight:600">Tap to reveal</span> definition → Got It is locked (you needed help)<br>
+          <span style="color:var(--text-secondary)">True mastery = knowing the word without checking definition or translation.</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:18px">
+        <div style="font-size:13px;font-weight:700;color:#4F9BD9;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Features</div>
+        <div style="font-size:14px;color:var(--text-defn);line-height:1.8">
+          <span style="font-weight:600">Flashcards</span> — Tap card to reveal definition, then rate yourself. Use <span style="color:var(--text-secondary)">↩ Undo</span> if you mis-click.<br>
+          <span style="font-weight:600">Quiz</span> — 5 random multiple-choice questions per category.<br>
+          <span style="font-weight:600">💡 Chinese Hint</span> — Optional per-card button. Shows translation but costs −0.5 pts. Over-reliance is tracked by the AI coach.<br>
+          <span style="font-weight:600">🧠 AI Coach</span> — After each session, analyzes your patterns and gives personalized memory tips.<br>
+          <span style="font-weight:600">+ New Words</span> — AI generates fresh vocabulary weekly. Optionally specify a topic.<br>
+          <span style="font-weight:600">Progress</span> — Your scores are saved automatically between sessions.
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#9B59B6;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Daily Routine (5–10 min)</div>
+        <div style="font-size:14px;color:var(--text-defn);line-height:1.8">
+          1. Pick a category and run through flashcards<br>
+          2. Try not to use the Chinese hint — challenge yourself!<br>
+          3. Take the quiz to test yourself<br>
+          4. Review the AI Coach summary for tips and level-ups<br>
+          5. Once a week, tap <span style="font-weight:600">+ New Words</span> to refresh your vocab pool
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DATA BACKUP -->
+  <div style="margin:0 24px 28px;padding:18px;border-radius:14px;background:var(--surface);border:1px solid var(--surface-border)">
+    <div style="font-size:14px;font-weight:700;margin-bottom:4px">💾 Your Vocab Pool Data</div>
+    <div style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;line-height:1.5">
+      Progress saves in this browser automatically. Export to back up or move to another device.
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-sm" style="background:rgba(79,155,217,0.7);flex:1" onclick="exportData()">📤 Export</button>
+      <button class="btn btn-sm btn-outline" style="flex:1" onclick="document.getElementById('import-file').click()">📥 Import</button>
+      <button class="btn btn-sm" style="background:rgba(217,79,79,0.2);color:#D94F4F;border:1px solid rgba(217,79,79,0.25);flex:1" onclick="resetAllData()">🗑 Reset All</button>
+    </div>
+    <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(event)">
+    <div id="backup-status" style="margin-top:8px;font-size:13px;text-align:center;color:var(--text-secondary)"></div>
+  </div>
+
+  <!-- API KEY SETTINGS -->
+  <div style="margin:0 24px 28px;padding:18px;border-radius:14px;background:var(--surface);border:1px solid var(--surface-border)">
+    <div style="font-size:14px;font-weight:700;margin-bottom:4px">🔑 AI Features</div>
+    <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;line-height:1.5">
+      AI-powered features (+ New Words, Explore Scenes, AI Coach) need an Anthropic API key. Your key stays in this browser only — never sent anywhere else.
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <input id="api-key-input" type="password" placeholder="sk-ant-..." class="input-themed" style="flex:1;font-size:13px" value="">
+      <button class="btn btn-sm" style="background:rgba(61,187,110,0.7)" onclick="saveApiKey()">Save</button>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+      <div id="api-key-status" style="font-size:12px;color:var(--text-secondary)"></div>
+      <button style="background:none;border:none;font-size:12px;color:var(--text-secondary);cursor:pointer;font-family:inherit;text-decoration:underline" onclick="clearApiKey()">Remove key</button>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--text-muted);line-height:1.5">
+      Get your key at <span style="color:#4F9BD9">console.anthropic.com</span> → API Keys. Without a key, AI features are disabled but flashcards and quizzes work normally.
+    </div>
+  </div>
+</div>
+<div id="view-flashcards" class="hidden">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <button class="back-btn" onclick="goHome()">← Back</button>
+    <div style="display:flex;align-items:center;gap:10px;margin-right:28px">
+      <span id="fc-mastery" class="mastery-badge"></span>
+    </div>
+  </div>
+  <div id="fc-counter" class="counter"></div>
+  <div id="fc-card" class="flashcard" onclick="flipCard()">
+    <div id="fc-word" class="word-display"></div>
+    <div id="fc-phonetic" class="phonetic"></div>
+    <div id="fc-pos" class="pos"></div>
+    <div id="fc-back" class="hidden" style="animation:fadeIn 0.3s ease">
+      <div id="fc-defn" class="defn"></div>
+      <div id="fc-example" class="example"></div>
+      <div id="fc-synonyms" class="synonyms"></div>
+    </div>
+    <div id="fc-hint" class="tap-hint">tap to reveal definition</div>
+  </div>
+  <div id="fc-zh-hint-area" style="text-align:center;margin:10px 28px 0">
+    <button id="fc-zh-btn" class="btn zh-font" style="background:rgba(232,168,56,0.1);border:1px solid rgba(232,168,56,0.2);color:#D4A03A;font-size:12px;padding:6px 16px" onclick="revealZhHint()">💡 Show Chinese</button>
+    <div id="fc-zh" class="zh-line zh-font hidden"></div>
+    <div id="fc-zh-penalty" class="hidden" style="font-size:11px;color:#D94F4F;margin-top:4px">−0.5 pts for using hint</div>
+  </div>
+  <div class="card-actions">
+    <button id="btn-learning" class="btn" style="background:rgba(217,79,79,0.7)" onclick="nextCard(false)">✕ Still Learning</button>
+    <button id="btn-undo" class="btn btn-outline" style="font-size:12px;padding:10px 14px;opacity:0.3" disabled onclick="undoLastCard()">↩ Undo</button>
+    <button id="btn-gotit" class="btn" style="background:rgba(61,187,110,0.7)" onclick="nextCard(true)">✓ Got It</button>
+  </div>
+</div>
+
+<!-- ═══════════ QUIZ VIEW ═══════════ -->
+<div id="view-quiz" class="hidden">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <button class="back-btn" onclick="goHome()">← Back</button>
+  </div>
+  <div id="quiz-counter" class="counter"></div>
+  <div style="padding:8px 28px">
+    <div id="quiz-prompt" style="font-size:26px;font-weight:700;margin-bottom:4px"></div>
+    <div id="quiz-meta" style="font-size:13px;color:var(--text-secondary);margin-bottom:6px"></div>
+    <div id="quiz-zh-hint" style="margin-bottom:16px"></div>
+    <div id="quiz-options" style="display:flex;flex-direction:column;gap:10px"></div>
+    <div id="quiz-feedback" class="hidden" style="margin-top:20px;text-align:center">
+      <div id="quiz-fb-example" style="font-size:14px;color:var(--text-secondary);margin-bottom:12px;font-style:italic"></div>
+      <button id="quiz-next-btn" class="btn" style="background:rgba(79,155,217,0.7)" onclick="nextQuizQuestion()">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ QUIZ RESULT VIEW ═══════════ -->
+<div id="view-quiz-result" class="hidden">
+  <div class="quiz-result">
+    <div id="result-emoji" style="font-size:64px"></div>
+    <div id="result-pct" class="result-score"></div>
+    <div id="result-label" class="result-label"></div>
+    <div style="margin-top:32px;display:flex;gap:12px;justify-content:center">
+      <button class="btn" style="background:rgba(79,155,217,0.7)" onclick="startQuiz(currentCatKey)">Try Again</button>
+      <button class="btn" style="background:rgba(255,255,255,0.1)" onclick="goHome()">Home</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════
+const CATEGORIES = {
+  casual: {
+    label: "Everyday American", icon: "🗣️", color: "#4F9BD9",
+    words: [
+      { word: "Touch base", phonetic: "/tʌtʃ beɪs/", pos: "phrasal verb", zh: "简单沟通一下", definition: "To make brief contact or check in with someone.", example: "I'll touch base with the team tomorrow — just a quick check-in to see how things are going.", synonyms: ["check in", "follow up", "connect"] },
+      { word: "Ballpark", phonetic: "/ˈbɔːl.pɑːrk/", pos: "noun / adjective", zh: "大概的数字；估算", definition: "An approximate number or rough estimate.", example: "I don't need the exact cost — just give me a ballpark, a rough number is fine.", synonyms: ["estimate", "rough number", "approximation"] },
+      { word: "No-brainer", phonetic: "/noʊ ˈbreɪ.nɚ/", pos: "noun", zh: "不用想的事；显而易见", definition: "Something so obvious or easy that it requires no thought.", example: "50% off on a product we already love? That's a no-brainer — obviously we should buy it.", synonyms: ["obvious choice", "easy decision", "slam dunk"] },
+      { word: "Heads up", phonetic: "/hedz ʌp/", pos: "noun / interjection", zh: "提前通知；提醒", definition: "An advance warning or alert about something.", example: "Heads up, the meeting moved to 3pm — I'm telling you now so you're not surprised later.", synonyms: ["warning", "alert", "notice"] },
+      { word: "In the loop", phonetic: "/ɪn ðə luːp/", pos: "idiom", zh: "知情；在消息圈内", definition: "Being informed or aware of what's happening.", example: "CC me on every email — keep me in the loop so I always know what's happening.", synonyms: ["informed", "up to date", "aware"] },
+      { word: "Game changer", phonetic: "/ɡeɪm ˈtʃeɪn.dʒɚ/", pos: "noun", zh: "颠覆性事物", definition: "Something that significantly alters how things are done.", example: "This new technology completely changed how we work — it's been a real game changer.", synonyms: ["breakthrough", "revolution", "turning point"] },
+      { word: "On the same page", phonetic: "/ɑːn ðə seɪm peɪdʒ/", pos: "idiom", zh: "达成共识；意见一致", definition: "In agreement or having a shared understanding.", example: "Before we present, let's make sure we're on the same page — we all agree on the plan, right?", synonyms: ["aligned", "in agreement", "in sync"] },
+      { word: "Pull the trigger", phonetic: "/pʊl ðə ˈtrɪɡ.ɚ/", pos: "idiom", zh: "下决心；果断行动", definition: "To make a decisive action or final commitment.", example: "We've researched enough. Time to pull the trigger and commit — make the decision now.", synonyms: ["commit", "take action", "go for it"] },
+      { word: "Low-hanging fruit", phonetic: "/loʊ ˈhæŋ.ɪŋ fruːt/", pos: "noun", zh: "容易实现的目标", definition: "Easy targets or tasks that can be accomplished with little effort.", example: "Fixing the typos on our website is low-hanging fruit — easy to do, quick results.", synonyms: ["easy wins", "quick gains", "simple tasks"] },
+      { word: "Circle back", phonetic: "/ˈsɝː.kəl bæk/", pos: "phrasal verb", zh: "回头再讨论", definition: "To return to a topic or follow up at a later time.", example: "I don't have the answer now, but I'll circle back — come back to this topic later today.", synonyms: ["revisit", "follow up", "return to"] },
+      { word: "Get the ball rolling", phonetic: "/ɡet ðə bɔːl ˈroʊ.lɪŋ/", pos: "idiom", zh: "开始行动；启动", definition: "To start a process or activity.", example: "Enough planning — let's get the ball rolling and actually start working on this.", synonyms: ["kick off", "start", "initiate"] },
+      { word: "Crunch time", phonetic: "/krʌntʃ taɪm/", pos: "noun", zh: "关键时刻；冲刺期", definition: "A critical period when pressure is high and deadlines are close.", example: "Launch is in 3 days — it's crunch time, the pressure is on and every hour counts.", synonyms: ["deadline pressure", "final stretch", "do-or-die"] },
+      { word: "Drop the ball", phonetic: "/drɑːp ðə bɔːl/", pos: "idiom", zh: "搞砸；失误", definition: "To make a mistake by failing to do something important.", example: "I forgot to send the contract and we lost the client — I really dropped the ball on that.", synonyms: ["mess up", "fail", "fumble"] },
+      { word: "Run it by", phonetic: "/rʌn ɪt baɪ/", pos: "phrasal verb", zh: "征求意见；过一下", definition: "To share an idea with someone for their feedback or approval.", example: "I have a new idea but I want to run it by you first — get your feedback before we commit.", synonyms: ["check with", "consult", "get input"] },
+      { word: "On the back burner", phonetic: "/ɑːn ðə bæk ˈbɝː.nɚ/", pos: "idiom", zh: "暂时搁置", definition: "Given low priority; delayed for now.", example: "The rebrand is on the back burner — we've paused it and put other things first.", synonyms: ["postponed", "shelved", "deprioritized"] },
+      { word: "Wrap up", phonetic: "/ræp ʌp/", pos: "phrasal verb", zh: "结束；收尾", definition: "To finish or conclude something.", example: "It's 5pm — let's wrap up this meeting and finish for today.", synonyms: ["finish", "conclude", "close out"] },
+      { word: "Deep dive", phonetic: "/diːp daɪv/", pos: "noun / verb", zh: "深入研究", definition: "A thorough analysis or detailed exploration of a topic.", example: "The numbers look wrong — let's do a deep dive and thoroughly examine every detail.", synonyms: ["thorough analysis", "in-depth look", "detailed review"] },
+      { word: "Move the needle", phonetic: "/muːv ðə ˈniː.dəl/", pos: "idiom", zh: "产生明显效果", definition: "To make a noticeable difference or significant progress.", example: "One blog post won't move the needle — it won't make any noticeable difference in sales.", synonyms: ["make an impact", "drive change", "show results"] },
+      { word: "Wear many hats", phonetic: "/wer ˈmen.i hæts/", pos: "idiom", zh: "身兼多职", definition: "To have many different roles or responsibilities.", example: "I do marketing, sales, and customer support — I wear many hats, handling multiple jobs.", synonyms: ["multitask", "juggle roles", "do it all"] },
+      { word: "Put out fires", phonetic: "/pʊt aʊt ˈfaɪ.ɚz/", pos: "idiom", zh: "处理紧急问题", definition: "To deal with urgent problems as they come up.", example: "I planned to work on strategy but spent all day putting out fires — fixing one emergency after another.", synonyms: ["troubleshoot", "handle crises", "fix problems"] },
+    ]
+  },
+  marketing: {
+    label: "Marketing & Sales", icon: "📊", color: "#D94F4F",
+    words: [
+      { word: "Conversion", phonetic: "/kənˈvɝː.ʒən/", pos: "noun", zh: "转化（率）", definition: "When a prospect takes a desired action, like making a purchase.", example: "100 people visited, 8 actually bought — that 8% conversion means 8 out of 100 became buyers.", synonyms: ["sale", "acquisition", "close"] },
+      { word: "Demographics", phonetic: "/ˌdem.əˈɡræf.ɪks/", pos: "noun", zh: "人口统计数据", definition: "Statistical data about a population, especially regarding age, income, etc.", example: "Our demographics show our typical buyer: male, age 21–35, lives in a city, earns $50K+.", synonyms: ["audience data", "population stats", "market segments"] },
+      { word: "Brand equity", phonetic: "/brænd ˈek.wɪ.ti/", pos: "noun", zh: "品牌价值", definition: "The commercial value derived from consumer perception of a brand name.", example: "People pay $5 more just for the Nike logo — that extra value is brand equity.", synonyms: ["brand value", "brand strength", "reputation"] },
+      { word: "Omnichannel", phonetic: "/ˌɑːm.niˈtʃæn.əl/", pos: "adjective", zh: "全渠道的", definition: "A seamless approach to sales across all channels (online, retail, mobile).", example: "Browse on your phone, buy on the website, pick up in store — that seamless experience is omnichannel.", synonyms: ["multi-channel", "cross-platform", "integrated"] },
+      { word: "Retention", phonetic: "/rɪˈten.ʃən/", pos: "noun", zh: "留存；客户保留", definition: "The ability to keep existing customers over time.", example: "90% of buyers came back again — strong retention means customers stay loyal.", synonyms: ["loyalty", "customer keeping", "repeat business"] },
+      { word: "Go-to-market", phonetic: "/ˌɡoʊ.tə.ˈmɑːr.kɪt/", pos: "adjective / noun", zh: "上市策略", definition: "A plan or strategy for launching a product to reach customers.", example: "New flavor is ready — what's our go-to-market plan for getting it into stores and online?", synonyms: ["launch plan", "market entry", "rollout strategy"] },
+      { word: "Pain point", phonetic: "/peɪn pɔɪnt/", pos: "noun", zh: "痛点", definition: "A specific problem or frustration that customers experience.", example: "Customers hate the bitter aftertaste — that's their biggest pain point we need to fix.", synonyms: ["problem", "frustration", "issue"] },
+      { word: "KPI", phonetic: "/ˌkeɪ.piːˈaɪ/", pos: "noun (acronym)", zh: "关键绩效指标", definition: "Key Performance Indicator — a measurable value tracking business objectives.", example: "Our #1 KPI is app downloads — that's the key number we track to measure success.", synonyms: ["metric", "measure", "target"] },
+      { word: "Upsell", phonetic: "/ˈʌp.sel/", pos: "verb / noun", zh: "追加销售", definition: "To encourage a customer to buy a more expensive or upgraded product.", example: "They ordered the basic kit, so I upsold them the premium — got them to upgrade and spend more.", synonyms: ["upgrade", "cross-sell", "add-on"] },
+      { word: "Positioning", phonetic: "/pəˈzɪʃ.ən.ɪŋ/", pos: "noun", zh: "市场定位", definition: "How a brand is perceived in the mind of consumers relative to competitors.", example: "Volvo = safety, Apple = innovation — that's positioning: what you stand for in people's minds.", synonyms: ["branding", "market placement", "differentiation"] },
+      { word: "Churn", phonetic: "/tʃɝːn/", pos: "noun / verb", zh: "流失率", definition: "The rate at which customers stop buying or subscribing.", example: "We lose 5% of subscribers every month — that churn rate means customers are leaving.", synonyms: ["attrition", "turnover", "loss rate"] },
+      { word: "CTA", phonetic: "/ˌsiː.tiːˈeɪ/", pos: "noun (acronym)", zh: "行动号召", definition: "Call to Action — a prompt telling the audience what to do next.", example: "'Buy Now,' 'Sign Up,' 'Learn More' — those buttons are CTAs telling users what to do next.", synonyms: ["prompt", "directive", "next step"] },
+      { word: "Impression", phonetic: "/ɪmˈpreʃ.ən/", pos: "noun", zh: "曝光量", definition: "Each time an ad or content is displayed to a user.", example: "Our ad appeared on 1 million screens — that's 1M impressions, each one a single display.", synonyms: ["view", "exposure", "display"] },
+      { word: "DTC", phonetic: "/ˌdiː.tiːˈsiː/", pos: "noun (acronym)", zh: "直接面向消费者", definition: "Direct-to-Consumer — selling products directly without retailers.", example: "No stores, no middleman — we sell DTC, shipping directly from us to the customer.", synonyms: ["direct sales", "e-commerce", "online store"] },
+      { word: "Engagement", phonetic: "/ɪnˈɡeɪdʒ.mənt/", pos: "noun", zh: "互动；参与度", definition: "How actively users interact with content, measured by likes, shares, comments.", example: "200 likes, 50 shares, 30 comments — that active interaction is what we call engagement.", synonyms: ["interaction", "involvement", "participation"] },
+      { word: "Lead generation", phonetic: "/liːd ˌdʒen.əˈreɪ.ʃən/", pos: "noun", zh: "获客；潜在客户开发", definition: "The process of attracting and identifying potential customers.", example: "We collected 300 emails at the trade show — that's lead generation, finding potential buyers.", synonyms: ["prospecting", "outreach", "customer acquisition"] },
+      { word: "Market share", phonetic: "/ˈmɑːr.kɪt ʃer/", pos: "noun", zh: "市场份额", definition: "The percentage of total sales in an industry earned by a company.", example: "Out of every $100 spent in our industry, $12 goes to us — that's our 12% market share.", synonyms: ["share", "market portion", "competitive position"] },
+      { word: "SKU", phonetic: "/ˌes.keɪˈjuː/", pos: "noun (acronym)", zh: "库存单位", definition: "Stock Keeping Unit — a unique identifier for each product variant.", example: "Mint 30ml is one SKU, Grape 60ml is another — each size and flavor combo gets its own code.", synonyms: ["product code", "item number", "variant"] },
+      { word: "A/B testing", phonetic: "/eɪ biː ˈtes.tɪŋ/", pos: "noun", zh: "A/B 测试", definition: "Comparing two versions to see which performs better.", example: "Red button or blue button? We A/B tested both versions, and red got 20% more clicks.", synonyms: ["split testing", "comparison test", "experiment"] },
+      { word: "Influencer", phonetic: "/ˈɪn.flu.ən.sɚ/", pos: "noun", zh: "网红；意见领袖", definition: "A person with a large following who can affect purchasing decisions.", example: "She has 500K followers and her one post sold 2,000 units — that's the power of an influencer.", synonyms: ["creator", "KOL", "brand ambassador"] },
+    ]
+  },
+};
+
+const MASTERY = [
+  { label: "New", color: "#6B7280", min: 0 },
+  { label: "Learning", color: "#E8A838", min: 1 },
+  { label: "Familiar", color: "#4F9BD9", min: 3 },
+  { label: "Mastered", color: "#3DBB6E", min: 5 },
+];
+
+// ═══════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════
+let scores = {};
+let currentCatKey = null;
+let shuffledWords = [];
+let cardIndex = 0;
+let flipped = false;
+let transitioning = false;
+let quizQuestions = [];
+let quizCurrent = 0;
+let quizScore = 0;
+
+// Load saved scores
+try { scores = JSON.parse(localStorage.getItem('vocabforge_scores') || '{}'); } catch(e) {}
+function saveScores() { try { localStorage.setItem('vocabforge_scores', JSON.stringify(scores)); } catch(e) {} }
+
+// ═══════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════
+function hexToRgb(hex) {
+  return [parseInt(hex.slice(1,3),16), parseInt(hex.slice(3,5),16), parseInt(hex.slice(5,7),16)].join(',');
+}
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+function getMastery(word) {
+  const s = scores[word] || 0;
+  for (let i = MASTERY.length - 1; i >= 0; i--) { if (s >= MASTERY[i].min) return MASTERY[i]; }
+  return MASTERY[0];
+}
+function updateScore(word, delta) {
+  const c = scores[word] || 0;
+  scores[word] = Math.max(0, Math.min(10, c + delta));
+  saveScores();
+}
+function showView(id) {
+  ['view-home','view-flashcards','view-quiz','view-quiz-result'].forEach(v => {
+    document.getElementById(v).classList.toggle('hidden', v !== id);
+  });
+}
+
+function animateToggle(panelId, arrowId) {
+  const panel = document.getElementById(panelId);
+  const arrow = arrowId ? document.getElementById(arrowId) : null;
+  const isHidden = panel.classList.contains('hidden');
+
+  if (isHidden) {
+    // Show with expand animation
+    panel.classList.remove('hidden');
+    panel.classList.remove('anim-collapse');
+    panel.classList.add('anim-expand');
+    if (arrow) arrow.style.transform = 'rotate(180deg)';
+    // After animation ends, remove overflow clip so content shows fully
+    setTimeout(() => {
+      panel.classList.remove('anim-expand');
+      panel.style.overflow = 'visible';
+    }, 320);
+  } else {
+    // Collapse with animation
+    panel.style.overflow = '';
+    panel.classList.remove('anim-expand');
+    panel.classList.add('anim-collapse');
+    if (arrow) arrow.style.transform = 'rotate(0deg)';
+    setTimeout(() => {
+      panel.classList.add('hidden');
+      panel.classList.remove('anim-collapse');
+    }, 200);
+  }
+
+  return isHidden; // returns true if panel was just opened
+}
+
+// ═══════════════════════════════════════
+// CHINESE HINT SYSTEM (per-card, on-demand)
+// ═══════════════════════════════════════
+let zhUsedThisCard = false;
+let zhUsedCount = 0;    // hints used in this session
+let zhTotalCards = 0;    // total cards in this session
+
+function revealZhHint() {
+  if (zhUsedThisCard) return;
+  zhUsedThisCard = true;
+  zhUsedCount++;
+
+  const w = shuffledWords[cardIndex];
+
+  // Show the translation
+  const zhEl = document.getElementById('fc-zh');
+  zhEl.textContent = w.zh;
+  zhEl.classList.remove('hidden');
+  zhEl.style.animation = 'fadeIn 0.3s ease';
+
+  // Hide the hint button
+  document.getElementById('fc-zh-btn').classList.add('hidden');
+
+  // Apply -0.5 penalty
+  const oldScore = scores[w.word] || 0;
+  scores[w.word] = Math.max(0, oldScore - 0.5);
+  saveScores();
+
+  // Show penalty notice
+  document.getElementById('fc-zh-penalty').classList.remove('hidden');
+
+  // Disable "Got It" — you don't master a word if you needed the translation
+  const gotItBtn = document.getElementById('btn-gotit');
+  gotItBtn.disabled = true;
+  gotItBtn.style.opacity = '0.3';
+  gotItBtn.title = 'Disabled — you used the Chinese hint';
+
+  // Update mastery badge to reflect score change
+  const m = getMastery(w.word);
+  const mBadge = document.getElementById('fc-mastery');
+  mBadge.textContent = m.label;
+  mBadge.style.color = m.color;
+  mBadge.style.background = `rgba(${hexToRgb(m.color)},0.15)`;
+}
+
+function revealQuizZhHint(idx) {
+  const q = quizQuestions[idx];
+  if (q.zhRevealed) return;
+  q.zhRevealed = true;
+  zhUsedCount++;
+
+  // Apply -0.5 penalty
+  const oldScore = scores[q.word.word] || 0;
+  scores[q.word.word] = Math.max(0, oldScore - 0.5);
+  saveScores();
+
+  renderQuizQuestion();
+}
+
+// ═══════════════════════════════════════
+// HOME
+// ═══════════════════════════════════════
+function goHome() { showView('view-home'); renderHome(); }
+
+function renderHome() {
+  const allWords = Object.values(CATEGORIES).flatMap(c => c.words);
+  const mastered = allWords.filter(w => (scores[w.word]||0) >= 5).length;
+  document.getElementById('mastered-count').textContent = mastered;
+  document.getElementById('total-count').textContent = allWords.length;
+
+  const grid = document.getElementById('category-grid');
+  grid.innerHTML = '';
+
+  let cardIdx = 0;
+  Object.entries(CATEGORIES).forEach(([key, cat]) => {
+    const catMastered = cat.words.filter(w => (scores[w.word]||0) >= 5).length;
+    const pct = Math.round((catMastered / cat.words.length) * 100);
+    const rgb = hexToRgb(cat.color);
+
+    const card = document.createElement('div');
+    card.className = 'cat-card';
+    card.style.opacity = '0';
+    card.style.animation = `popIn 0.3s ease ${cardIdx * 0.07}s forwards`;
+    const isLight = document.body.classList.contains('light');
+    card.style.background = isLight
+      ? `linear-gradient(135deg, rgba(${rgb},0.08), rgba(${rgb},0.03))`
+      : `linear-gradient(135deg, rgba(${rgb},0.12), rgba(${rgb},0.04))`;
+    card.style.border = `1px solid rgba(${rgb},${isLight ? 0.15 : 0.2})`;
+
+    const isCustom = !!cat.custom;
+    card.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div class="cat-icon">${cat.icon}</div>
+        <button class="btn btn-outline" style="font-size:11px;padding:4px 10px" onclick="event.stopPropagation();editCategory('${key}')">✎ Edit</button>
+      </div>
+      <div class="cat-label">${cat.label}</div>
+      <div class="cat-count">${cat.words.length} words · ${catMastered} mastered</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${pct}%;background:${cat.color}"></div></div>
+      <div class="actions">
+        <button class="btn" style="background:${cat.color}" onclick="startFlashcards('${key}')">Flashcards</button>
+        <button class="btn btn-outline" style="border-color:rgba(${rgb},0.3) !important" onclick="startQuiz('${key}')">Quiz</button>
+      </div>
+    `;
+    grid.appendChild(card);
+    cardIdx++;
+  });
+}
+
+// ═══════════════════════════════════════
+// FLASHCARDS
+// ═══════════════════════════════════════
+function startFlashcards(catKey) {
+  currentCatKey = catKey;
+  shuffledWords = shuffle(CATEGORIES[catKey].words);
+  cardIndex = 0;
+  flipped = false;
+  transitioning = false;
+  sessionChanges = [];
+  undoStack = [];
+  sessionLog = [];
+  zhUsedCount = 0;
+  zhUsedThisCard = false;
+  cardStartTime = Date.now();
+  showView('view-flashcards');
+  renderFlashcard();
+  animateCard('slideIn');
+}
+
+function renderFlashcard() {
+  const cat = CATEGORIES[currentCatKey];
+  const w = shuffledWords[cardIndex];
+  const m = getMastery(w.word);
+
+  document.getElementById('fc-counter').textContent = `${cardIndex+1} / ${shuffledWords.length} · ${cat.icon} ${cat.label}`;
+  document.getElementById('fc-word').textContent = w.word;
+  document.getElementById('fc-phonetic').textContent = w.phonetic;
+  document.getElementById('fc-pos').textContent = w.pos;
+
+  // Reset per-card hint state
+  zhUsedThisCard = false;
+  const zhBtn = document.getElementById('fc-zh-btn');
+  const zhEl = document.getElementById('fc-zh');
+  const zhPenalty = document.getElementById('fc-zh-penalty');
+  zhBtn.classList.remove('hidden');
+  zhEl.textContent = w.zh;
+  zhEl.classList.add('hidden');
+  zhPenalty.classList.add('hidden');
+
+  const mBadge = document.getElementById('fc-mastery');
+  mBadge.textContent = m.label;
+  mBadge.style.color = m.color;
+  mBadge.style.background = `rgba(${hexToRgb(m.color)},0.15)`;
+
+  const backEl = document.getElementById('fc-back');
+  const hintEl = document.getElementById('fc-hint');
+  if (flipped) {
+    backEl.classList.remove('hidden');
+    hintEl.classList.add('hidden');
+    document.getElementById('fc-defn').textContent = w.definition;
+    document.getElementById('fc-example').textContent = `"${w.example}"`;
+    document.getElementById('fc-synonyms').innerHTML = w.synonyms.map(s => `<span class="syn-tag">${s}</span>`).join('');
+  } else {
+    backEl.classList.add('hidden');
+    hintEl.classList.remove('hidden');
+  }
+}
+
+function flipCard() {
+  if (transitioning) return;
+  flipped = !flipped;
+  renderFlashcard();
+
+  // If user flipped to see the definition, they don't fully know this word
+  if (flipped) {
+    const gotItBtn = document.getElementById('btn-gotit');
+    gotItBtn.disabled = true;
+    gotItBtn.style.opacity = '0.3';
+    gotItBtn.title = 'Disabled — you checked the definition';
+  }
+}
+
+function animateCard(name) {
+  const card = document.getElementById('fc-card');
+  card.style.animation = 'none';
+  card.offsetHeight; // force reflow
+  card.style.animation = `${name} 0.3s ease forwards`;
+}
+
+let sessionChanges = [];
+let undoStack = [];
+let sessionLog = [];
+let cardStartTime = 0;
+
+function nextCard(knew) {
+  if (transitioning) return;
+  transitioning = true;
+
+  const w = shuffledWords[cardIndex];
+  const oldScore = scores[w.word] || 0;
+  const timeSpent = Math.round((Date.now() - cardStartTime) / 1000);
+  updateScore(w.word, knew ? 2 : -1);
+  const newScore = scores[w.word] || 0;
+  const oldM = getMasteryForScore(oldScore);
+  const newM = getMasteryForScore(newScore);
+  if (newM.label !== oldM.label) {
+    sessionChanges.push({ word: w.word, from: oldM, to: newM });
+  }
+
+  // Track rich session data
+  sessionLog.push({
+    word: w.word,
+    pos: w.pos,
+    zh: w.zh,
+    knew: knew,
+    flippedBeforeAnswer: flipped,
+    usedZhHint: zhUsedThisCard,
+    timeSpent: timeSpent,
+    oldScore: oldScore,
+    newScore: newScore,
+    mastery: getMasteryForScore(newScore).label
+  });
+
+  // Save to undo stack
+  undoStack.push({ index: cardIndex, word: w.word, oldScore: oldScore, knew: knew });
+
+  document.getElementById('btn-learning').disabled = true;
+  document.getElementById('btn-gotit').disabled = true;
+  document.getElementById('btn-learning').style.opacity = '0.4';
+  document.getElementById('btn-gotit').style.opacity = '0.4';
+
+  animateCard('slideOut');
+
+  setTimeout(() => {
+    cardIndex++;
+    if (cardIndex >= shuffledWords.length) {
+      transitioning = false;
+      showSessionSummary();
+      return;
+    }
+    flipped = false;
+    renderFlashcard();
+    updateUndoButton();
+    cardStartTime = Date.now();
+    animateCard('slideIn');
+
+    setTimeout(() => {
+      transitioning = false;
+      document.getElementById('btn-learning').disabled = false;
+      document.getElementById('btn-gotit').disabled = false;
+      document.getElementById('btn-learning').style.opacity = '1';
+      document.getElementById('btn-gotit').style.opacity = '1';
+    }, 50);
+  }, 300);
+}
+
+function undoLastCard() {
+  if (transitioning || undoStack.length === 0) return;
+  transitioning = true;
+
+  const last = undoStack.pop();
+
+  // Restore the old score
+  scores[last.word] = last.oldScore;
+  saveScores();
+
+  // Remove any session level-up for this word
+  sessionChanges = sessionChanges.filter(c => c.word !== last.word);
+
+  // Remove the last sessionLog entry for this word
+  for (let i = sessionLog.length - 1; i >= 0; i--) {
+    if (sessionLog[i].word === last.word) { sessionLog.splice(i, 1); break; }
+  }
+
+  // Disable buttons during animation
+  document.getElementById('btn-learning').disabled = true;
+  document.getElementById('btn-gotit').disabled = true;
+  document.getElementById('btn-learning').style.opacity = '0.4';
+  document.getElementById('btn-gotit').style.opacity = '0.4';
+
+  // Slide out current card to the right (reverse direction)
+  const card = document.getElementById('fc-card');
+  card.style.animation = 'none';
+  card.offsetHeight;
+  card.style.animation = 'slideOutRight 0.3s ease forwards';
+
+  setTimeout(() => {
+    cardIndex = last.index;
+    flipped = false;
+    renderFlashcard();
+    updateUndoButton();
+
+    // Slide in from left (reverse direction)
+    card.style.animation = 'none';
+    card.offsetHeight;
+    card.style.animation = 'slideInLeft 0.3s ease forwards';
+
+    setTimeout(() => {
+      transitioning = false;
+      document.getElementById('btn-learning').disabled = false;
+      document.getElementById('btn-gotit').disabled = false;
+      document.getElementById('btn-learning').style.opacity = '1';
+      document.getElementById('btn-gotit').style.opacity = '1';
+    }, 50);
+  }, 300);
+}
+
+function updateUndoButton() {
+  const btn = document.getElementById('btn-undo');
+  if (undoStack.length > 0) {
+    btn.disabled = false;
+    btn.style.opacity = '1';
+  } else {
+    btn.disabled = true;
+    btn.style.opacity = '0.3';
+  }
+}
+
+function getMasteryForScore(s) {
+  for (let i = MASTERY.length - 1; i >= 0; i--) { if (s >= MASTERY[i].min) return MASTERY[i]; }
+  return MASTERY[0];
+}
+
+function showSessionSummary() {
+  const cat = CATEGORIES[currentCatKey];
+  const catMastered = cat.words.filter(w => (scores[w.word]||0) >= 5).length;
+  const total = cat.words.length;
+  const gotItCount = sessionLog.filter(l => l.knew).length;
+  const stillLearningCount = sessionLog.filter(l => !l.knew).length;
+  const avgTime = sessionLog.length > 0 ? Math.round(sessionLog.reduce((a, l) => a + l.timeSpent, 0) / sessionLog.length) : 0;
+  const noFlipCount = sessionLog.filter(l => l.knew && !l.flippedBeforeAnswer).length;
+
+  const zhHintCount = sessionLog.filter(l => l.usedZhHint).length;
+
+  // Save session to learning history
+  saveSessionHistory({
+    date: new Date().toISOString(),
+    category: currentCatKey,
+    categoryLabel: cat.label,
+    total: sessionLog.length,
+    gotIt: gotItCount,
+    stillLearning: stillLearningCount,
+    avgTime: avgTime,
+    noFlipAnswers: noFlipCount,
+    zhHintsUsed: zhHintCount,
+    levelUps: sessionChanges.length,
+    struggled: sessionLog.filter(l => !l.knew).map(l => ({ word: l.word, pos: l.pos, zh: l.zh })),
+    confident: sessionLog.filter(l => l.knew && l.timeSpent < 4 && !l.flippedBeforeAnswer).map(l => ({ word: l.word, pos: l.pos, zh: l.zh })),
+    details: sessionLog
+  });
+
+  // Build level-ups HTML
+  let changesHtml = '';
+  if (sessionChanges.length > 0) {
+    changesHtml = `<div style="margin-top:20px;text-align:left;max-width:340px;margin-left:auto;margin-right:auto">
+      <div style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Level ups</div>
+      ${sessionChanges.map(c => `
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
+          <span style="font-weight:600">${c.word}</span>
+          <span>
+            <span class="mastery-badge" style="color:${c.from.color};background:rgba(${hexToRgb(c.from.color)},0.15);font-size:11px">${c.from.label}</span>
+            <span style="color:#555;margin:0 4px">→</span>
+            <span class="mastery-badge" style="color:${c.to.color};background:rgba(${hexToRgb(c.to.color)},0.15);font-size:11px">${c.to.label}</span>
+          </span>
+        </div>
+      `).join('')}
+    </div>`;
+  }
+
+  // Build stats row
+  const statsHtml = `
+    <div style="display:flex;gap:12px;justify-content:center;margin-top:16px;flex-wrap:wrap">
+      <div style="text-align:center;padding:10px 16px;background:rgba(61,187,110,0.08);border-radius:12px;min-width:70px">
+        <div style="font-size:22px;font-weight:800;color:#3DBB6E">${gotItCount}</div>
+        <div style="font-size:11px;color:var(--text-secondary)">Got It</div>
+      </div>
+      <div style="text-align:center;padding:10px 16px;background:rgba(217,79,79,0.08);border-radius:12px;min-width:70px">
+        <div style="font-size:22px;font-weight:800;color:#D94F4F">${stillLearningCount}</div>
+        <div style="font-size:11px;color:var(--text-secondary)">Learning</div>
+      </div>
+      <div style="text-align:center;padding:10px 16px;background:rgba(79,155,217,0.08);border-radius:12px;min-width:70px">
+        <div style="font-size:22px;font-weight:800;color:#4F9BD9">${avgTime}s</div>
+        <div style="font-size:11px;color:var(--text-secondary)">Avg Time</div>
+      </div>
+      <div style="text-align:center;padding:10px 16px;background:rgba(232,168,56,0.08);border-radius:12px;min-width:70px">
+        <div style="font-size:22px;font-weight:800;color:${zhHintCount > sessionLog.length * 0.5 ? '#D94F4F' : '#E8A838'}">${zhHintCount}</div>
+        <div style="font-size:11px;color:var(--text-secondary)">中文 Hints</div>
+      </div>
+    </div>`;
+
+  const summaryView = document.getElementById('view-quiz-result');
+  showView('view-quiz-result');
+  summaryView.innerHTML = `
+    <div style="padding:32px 28px;text-align:center">
+      <div style="font-size:48px">📋</div>
+      <div style="font-size:24px;font-weight:800;margin-top:8px">${cat.icon} ${cat.label}</div>
+      <div style="font-size:14px;color:var(--text-secondary);margin-top:6px">${catMastered} / ${total} words mastered</div>
+      <div class="progress-bar" style="max-width:240px;margin:12px auto 0"><div class="progress-fill" style="width:${Math.round(catMastered/total*100)}%;background:${cat.color}"></div></div>
+      ${statsHtml}
+      ${changesHtml}
+      <div id="ai-analysis" style="margin-top:24px;text-align:left;max-width:340px;margin-left:auto;margin-right:auto">
+        <div style="padding:16px;background:rgba(155,89,182,0.06);border:1px solid rgba(155,89,182,0.15);border-radius:14px">
+          <div style="font-size:13px;font-weight:700;color:#9B59B6;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">🧠 AI Learning Coach</div>
+          <div id="ai-analysis-content" style="font-size:14px;color:var(--text-defn);line-height:1.7">
+            <span style="color:var(--text-secondary)">Analyzing your learning patterns...</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:24px;display:flex;gap:12px;justify-content:center">
+        <button class="btn" style="background:${cat.color}" onclick="startFlashcards('${currentCatKey}')">Study Again</button>
+        <button class="btn" style="background:rgba(255,255,255,0.1)" onclick="restoreQuizResult();goHome()">Home</button>
+      </div>
+    </div>
+  `;
+
+  // Trigger AI analysis
+  generateAIAnalysis('flashcard');
+}
+
+// ═══════════════════════════════════════
+// LEARNING HISTORY
+// ═══════════════════════════════════════
+function saveSessionHistory(session) {
+  try {
+    const history = JSON.parse(localStorage.getItem('vocabforge_history') || '[]');
+    history.push(session);
+    // Keep last 30 sessions
+    if (history.length > 30) history.splice(0, history.length - 30);
+    localStorage.setItem('vocabforge_history', JSON.stringify(history));
+  } catch(e) {}
+}
+
+function getSessionHistory() {
+  try { return JSON.parse(localStorage.getItem('vocabforge_history') || '[]'); } catch(e) { return []; }
+}
+
+function getLearnerProfile() {
+  const history = getSessionHistory();
+  if (history.length === 0) return null;
+
+  const totalSessions = history.length;
+  const allStruggledWords = history.flatMap(h => h.struggled || []);
+  const allConfidentWords = history.flatMap(h => h.confident || []);
+  const avgTimeOverall = Math.round(history.reduce((a, h) => a + (h.avgTime || 0), 0) / totalSessions);
+  const catCounts = {};
+  history.forEach(h => { catCounts[h.categoryLabel] = (catCounts[h.categoryLabel] || 0) + 1; });
+  const favCategory = Object.entries(catCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'none';
+  const totalGotIt = history.reduce((a, h) => a + (h.gotIt || 0), 0);
+  const totalCards = history.reduce((a, h) => a + (h.total || 0), 0);
+  const overallAccuracy = totalCards > 0 ? Math.round((totalGotIt / totalCards) * 100) : 0;
+
+  // Find repeat struggled words
+  const struggleFreq = {};
+  allStruggledWords.forEach(w => { struggleFreq[w.word] = (struggleFreq[w.word] || 0) + 1; });
+  const repeatStruggle = Object.entries(struggleFreq).filter(([_, c]) => c >= 2).map(([w]) => w);
+
+  return {
+    totalSessions,
+    avgTimeOverall,
+    favCategory,
+    overallAccuracy,
+    repeatStruggle,
+    recentStruggledTypes: allStruggledWords.slice(-20).map(w => w.pos),
+    totalCards,
+    totalGotIt
+  };
+}
+
+// ═══════════════════════════════════════
+// AI LEARNING ANALYSIS
+// ═══════════════════════════════════════
+async function generateAIAnalysis(mode) {
+  const el = document.getElementById('ai-analysis-content');
+  const profile = getLearnerProfile();
+  const cat = CATEGORIES[currentCatKey];
+
+  // Build current session summary
+  const struggled = sessionLog.filter(l => !l.knew);
+  const confident = sessionLog.filter(l => l.knew && l.timeSpent < 4);
+  const slowCorrect = sessionLog.filter(l => l.knew && l.timeSpent >= 8);
+
+  let quizContext = '';
+  if (mode === 'quiz' && quizQuestions) {
+    const wrong = quizQuestions.filter(q => q.answered !== null && q.answered !== q.correct);
+    const right = quizQuestions.filter(q => q.answered === q.correct);
+    quizContext = `
+Quiz results: ${quizScore}/${quizQuestions.length} correct.
+Wrong answers: ${wrong.map(q => q.word.word + ' (' + q.word.pos + ', ' + q.word.zh + ')').join(', ') || 'none'}.
+Correct answers: ${right.map(q => q.word.word).join(', ') || 'none'}.`;
+  }
+
+  const prompt = `You are a language learning coach for a Chinese-speaking marketing professional learning Business English for the US market. Analyze their learning session and give personalized, actionable advice.
+
+CURRENT SESSION (${cat.label}):
+- Total cards: ${sessionLog.length}
+- Got it: ${sessionLog.filter(l => l.knew).length}, Still learning: ${struggled.length}
+- Average time per card: ${Math.round(sessionLog.reduce((a, l) => a + l.timeSpent, 0) / (sessionLog.length || 1))}s
+- Answered without flipping (already knew): ${sessionLog.filter(l => l.knew && !l.flippedBeforeAnswer).length}
+- Used Chinese hint: ${sessionLog.filter(l => l.usedZhHint).length} out of ${sessionLog.length} cards (each hint costs -0.5 pts)
+- Words where hint was used: ${sessionLog.filter(l => l.usedZhHint).map(l => l.word + ' (' + l.zh + ')').join(', ') || 'none'}
+- Struggled words: ${struggled.map(l => l.word + ' (' + l.pos + ', ' + l.zh + ')').join(', ') || 'none'}
+- Quick confident words: ${confident.map(l => l.word).join(', ') || 'none'}
+- Slow but correct (8s+): ${slowCorrect.map(l => l.word + ' (' + l.timeSpent + 's)').join(', ') || 'none'}
+${quizContext}
+
+${profile ? `LEARNER PROFILE (${profile.totalSessions} total sessions):
+- Overall accuracy: ${profile.overallAccuracy}%
+- Avg time per card: ${profile.avgTimeOverall}s
+- Most studied category: ${profile.favCategory}
+- Repeatedly struggled words: ${profile.repeatStruggle.join(', ') || 'none'}
+- Total cards reviewed: ${profile.totalCards}` : 'First session — no history yet.'}
+
+Respond in this exact format (use simple English, be concise, include Chinese where helpful):
+1. **Pattern** (1-2 sentences): What pattern do you see in their learning? Are they fast/slow? Do they struggle with certain word types (nouns, idioms, acronyms)?
+2. **Memory Tips** (2-3 specific tips): For the words they struggled with, give concrete memory tricks — mnemonics, word associations, Chinese-English bridges, usage scenarios. Make these specific to the actual words.
+3. **Next Step** (1 sentence): What should they focus on next session?
+
+Keep the total under 150 words. Do NOT use markdown formatting or asterisks. Use plain text with line breaks.`;
+
+  try {
+    const text = await callAI(prompt);
+
+    if (text) {
+      // Save the insight
+      saveInsight(text);
+      el.innerHTML = text.replace(/\n/g, '<br>');
+    } else {
+      el.innerHTML = buildFallbackAnalysis(struggled, confident, slowCorrect);
+    }
+  } catch(e) {
+    console.error(e);
+    el.innerHTML = buildFallbackAnalysis(struggled, confident, slowCorrect);
+  }
+}
+
+function buildFallbackAnalysis(struggled, confident, slowCorrect) {
+  let html = '';
+  if (struggled.length === 0) {
+    html += '<span style="color:#3DBB6E;font-weight:600">Great session!</span> You knew all the words. Try the quiz to test deeper recall.<br><br>';
+  } else {
+    html += `<span style="font-weight:600">Words to review:</span> ${struggled.map(l => '<span style="color:#E8A838">' + l.word + '</span> (' + l.zh + ')').join(', ')}.<br><br>`;
+  }
+  if (slowCorrect.length > 0) {
+    html += `<span style="font-weight:600">Almost there:</span> ${slowCorrect.map(l => l.word).join(', ')} — you got these right but took extra time. Try using them in a sentence to build speed.<br><br>`;
+  }
+  if (confident.length > 0) {
+    html += `<span style="font-weight:600">Strong words:</span> ${confident.map(l => l.word).join(', ')} — these are solid. `;
+  }
+  const profile = getLearnerProfile();
+  if (profile && profile.repeatStruggle.length > 0) {
+    html += `<br><br><span style="color:#D94F4F;font-weight:600">Repeated trouble spots:</span> ${profile.repeatStruggle.join(', ')} — focus extra time on these next session.`;
+  }
+  return html;
+}
+
+function saveInsight(text) {
+  try {
+    const insights = JSON.parse(localStorage.getItem('vocabforge_insights') || '[]');
+    insights.push({ date: new Date().toISOString(), text: text });
+    if (insights.length > 10) insights.splice(0, insights.length - 10);
+    localStorage.setItem('vocabforge_insights', JSON.stringify(insights));
+  } catch(e) {}
+}
+
+function restoreQuizResult() {
+  // Reset the quiz-result view HTML for future quiz use
+  document.getElementById('view-quiz-result').innerHTML = `
+    <div class="quiz-result">
+      <div id="result-emoji" style="font-size:64px"></div>
+      <div id="result-pct" class="result-score"></div>
+      <div id="result-label" class="result-label"></div>
+      <div style="margin-top:32px;display:flex;gap:12px;justify-content:center">
+        <button class="btn" style="background:rgba(79,155,217,0.7)" onclick="startQuiz(currentCatKey)">Try Again</button>
+        <button class="btn" style="background:rgba(255,255,255,0.1)" onclick="goHome()">Home</button>
+      </div>
+    </div>
+  `;
+}
+
+// ═══════════════════════════════════════
+// QUIZ
+// ═══════════════════════════════════════
+function startQuiz(catKey) {
+  currentCatKey = catKey;
+  const words = shuffle(CATEGORIES[catKey].words).slice(0, 5);
+  quizQuestions = words.map(w => {
+    const others = CATEGORIES[catKey].words.filter(x => x.word !== w.word);
+    const wrong = shuffle(others).slice(0, 3).map(x => x.definition);
+    return { word: w, options: shuffle([w.definition, ...wrong]), correct: w.definition, answered: null, zhRevealed: false };
+  });
+  quizCurrent = 0;
+  quizScore = 0;
+  zhUsedCount = 0;
+  sessionLog = [];
+  showView('view-quiz');
+  renderQuizQuestion();
+}
+
+function renderQuizQuestion() {
+  const q = quizQuestions[quizCurrent];
+  document.getElementById('quiz-counter').textContent = `Question ${quizCurrent+1} / ${quizQuestions.length}`;
+  document.getElementById('quiz-prompt').innerHTML = `What does <span style="color:#E8A838">${q.word.word}</span> mean?`;
+  document.getElementById('quiz-meta').textContent = `${q.word.phonetic} · ${q.word.pos}`;
+
+  const zhHint = document.getElementById('quiz-zh-hint');
+  if (q.zhRevealed) {
+    zhHint.innerHTML = `<span class="zh-badge zh-font">${q.word.zh}</span><span style="font-size:11px;color:#D94F4F;margin-left:8px">−0.5 pts</span>`;
+  } else if (q.answered === null) {
+    zhHint.innerHTML = `<button class="btn zh-font" style="background:rgba(232,168,56,0.1);border:1px solid rgba(232,168,56,0.2);color:#D4A03A;font-size:12px;padding:5px 14px" onclick="revealQuizZhHint(${quizCurrent})">💡 Show Chinese</button>`;
+  } else {
+    // After answering, show the Chinese for learning
+    zhHint.innerHTML = `<span class="zh-badge zh-font">${q.word.zh}</span>`;
+  }
+
+  const optionsEl = document.getElementById('quiz-options');
+  optionsEl.innerHTML = '';
+  q.options.forEach(opt => {
+    const div = document.createElement('div');
+    div.className = 'quiz-option';
+    div.textContent = opt;
+    if (q.answered !== null) {
+      div.classList.add('answered');
+      if (opt === q.correct) div.classList.add('correct');
+      else if (opt === q.answered) div.classList.add('wrong');
+    } else {
+      div.onclick = () => answerQuiz(opt);
+    }
+    optionsEl.appendChild(div);
+  });
+
+  const fbEl = document.getElementById('quiz-feedback');
+  if (q.answered !== null) {
+    fbEl.classList.remove('hidden');
+    document.getElementById('quiz-fb-example').textContent = `"${q.word.example}"`;
+    document.getElementById('quiz-next-btn').textContent =
+      quizCurrent < quizQuestions.length - 1 ? 'Next →' : 'See Results';
+  } else {
+    fbEl.classList.add('hidden');
+  }
+}
+
+function answerQuiz(opt) {
+  const q = quizQuestions[quizCurrent];
+  if (q.answered !== null) return;
+  q.answered = opt;
+  const correct = opt === q.correct;
+  if (correct) quizScore++;
+  updateScore(q.word.word, correct ? 2 : -1);
+  renderQuizQuestion();
+}
+
+function nextQuizQuestion() {
+  quizCurrent++;
+  if (quizCurrent >= quizQuestions.length) {
+    showQuizResult();
+  } else {
+    renderQuizQuestion();
+  }
+}
+
+function showQuizResult() {
+  const pct = Math.round((quizScore / quizQuestions.length) * 100);
+  const cat = CATEGORIES[currentCatKey];
+  const wrong = quizQuestions.filter(q => q.answered !== null && q.answered !== q.correct);
+  const right = quizQuestions.filter(q => q.answered === q.correct);
+
+  // Build sessionLog from quiz for AI analysis
+  sessionLog = quizQuestions.map(q => ({
+    word: q.word.word,
+    pos: q.word.pos,
+    zh: q.word.zh,
+    knew: q.answered === q.correct,
+    flippedBeforeAnswer: false,
+    timeSpent: 5,
+    oldScore: (scores[q.word.word] || 0) - (q.answered === q.correct ? 2 : -1),
+    newScore: scores[q.word.word] || 0,
+    mastery: getMasteryForScore(scores[q.word.word] || 0).label
+  }));
+
+  // Save quiz session
+  saveSessionHistory({
+    date: new Date().toISOString(),
+    category: currentCatKey,
+    categoryLabel: cat.label,
+    type: 'quiz',
+    total: quizQuestions.length,
+    gotIt: quizScore,
+    stillLearning: quizQuestions.length - quizScore,
+    avgTime: 0,
+    noFlipAnswers: 0,
+    levelUps: 0,
+    struggled: wrong.map(q => ({ word: q.word.word, pos: q.word.pos, zh: q.word.zh })),
+    confident: right.map(q => ({ word: q.word.word, pos: q.word.pos, zh: q.word.zh })),
+    details: sessionLog
+  });
+
+  const summaryView = document.getElementById('view-quiz-result');
+  showView('view-quiz-result');
+  summaryView.innerHTML = `
+    <div style="padding:32px 28px;text-align:center">
+      <div style="font-size:64px">${pct >= 80 ? '🔥' : pct >= 60 ? '👍' : '💪'}</div>
+      <div class="result-score" style="font-size:64px;font-weight:800;color:${pct >= 80 ? '#3DBB6E' : pct >= 60 ? '#E8A838' : '#D94F4F'}">${pct}%</div>
+      <div style="font-size:16px;color:var(--text-secondary);margin-top:8px">${quizScore} / ${quizQuestions.length} correct</div>
+      ${wrong.length > 0 ? `
+        <div style="margin-top:16px;text-align:left;max-width:340px;margin-left:auto;margin-right:auto">
+          <div style="font-size:12px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Missed words</div>
+          ${wrong.map(q => `<div style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:14px"><span style="color:#D94F4F;font-weight:600">${q.word.word}</span> <span style="color:var(--text-secondary)">— ${q.word.definition.slice(0, 60)}…</span></div>`).join('')}
+        </div>` : ''}
+      <div id="ai-analysis" style="margin-top:20px;text-align:left;max-width:340px;margin-left:auto;margin-right:auto">
+        <div style="padding:16px;background:rgba(155,89,182,0.06);border:1px solid rgba(155,89,182,0.15);border-radius:14px">
+          <div style="font-size:13px;font-weight:700;color:#9B59B6;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">🧠 AI Learning Coach</div>
+          <div id="ai-analysis-content" style="font-size:14px;color:var(--text-defn);line-height:1.7">
+            <span style="color:var(--text-secondary)">Analyzing your quiz results...</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:24px;display:flex;gap:12px;justify-content:center">
+        <button class="btn" style="background:rgba(79,155,217,0.7)" onclick="startQuiz(currentCatKey)">Try Again</button>
+        <button class="btn" style="background:rgba(255,255,255,0.1)" onclick="restoreQuizResult();goHome()">Home</button>
+      </div>
+    </div>
+  `;
+
+  generateAIAnalysis('quiz');
+}
+
+// ═══════════════════════════════════════
+// API KEY MANAGEMENT
+// ═══════════════════════════════════════
+function getApiKey() {
+  return localStorage.getItem('vocabforge_apikey') || '';
+}
+
+function saveApiKey() {
+  const input = document.getElementById('api-key-input');
+  const key = input.value.trim();
+  const statusEl = document.getElementById('api-key-status');
+
+  if (!key) {
+    statusEl.innerHTML = '<span style="color:#D94F4F">Please enter a key.</span>';
+    return;
+  }
+
+  if (!key.startsWith('sk-ant-')) {
+    statusEl.innerHTML = '<span style="color:#E8A838">Key should start with sk-ant-. Saved anyway.</span>';
+  } else {
+    statusEl.innerHTML = '<span style="color:#3DBB6E">✓ Key saved! AI features are now active.</span>';
+  }
+
+  localStorage.setItem('vocabforge_apikey', key);
+  input.value = '';
+  input.placeholder = '••••••••' + key.slice(-6);
+  setTimeout(() => { statusEl.textContent = ''; }, 3000);
+}
+
+function clearApiKey() {
+  localStorage.removeItem('vocabforge_apikey');
+  const input = document.getElementById('api-key-input');
+  input.value = '';
+  input.placeholder = 'sk-ant-...';
+  document.getElementById('api-key-status').innerHTML = '<span style="color:var(--text-secondary)">Key removed.</span>';
+}
+
+function initApiKeyUI() {
+  const key = getApiKey();
+  if (key) {
+    const input = document.getElementById('api-key-input');
+    input.placeholder = '••••••••' + key.slice(-6);
+  }
+}
+
+// Centralized AI call — all features go through this
+async function callAI(prompt, maxTokens = 1000) {
+  const key = getApiKey();
+
+  const headers = { 'Content-Type': 'application/json' };
+
+  // If we have a user-provided key, use it with the required Anthropic headers
+  if (key) {
+    headers['x-api-key'] = key;
+    headers['anthropic-version'] = '2023-06-01';
+    headers['anthropic-dangerous-direct-browser-access'] = 'true';
+  }
+  // If no key, try without (works inside Claude artifacts where auth is handled automatically)
+
+  const response = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: headers,
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: maxTokens,
+      messages: [{ role: 'user', content: prompt }]
+    })
+  });
+
+  if (!response.ok) {
+    const err = await response.json().catch(() => ({}));
+    if (response.status === 401) throw new Error('Invalid API key. Check your key in 🔑 AI Features.');
+    if (response.status === 429) throw new Error('Rate limited. Wait a minute and try again.');
+    throw new Error(err.error?.message || `API error (${response.status})`);
+  }
+
+  const data = await response.json();
+  return data.content.map(i => i.text || '').join('');
+}
+
+// ═══════════════════════════════════════
+// GENERATE NEW WORDS (AI-powered)
+// ═══════════════════════════════════════
+// Load any user-added words from localStorage
+try {
+  const custom = JSON.parse(localStorage.getItem('vocabforge_custom') || '{}');
+  Object.entries(custom).forEach(([catKey, words]) => {
+    if (CATEGORIES[catKey]) {
+      // Avoid duplicates
+      const existingWords = new Set(CATEGORIES[catKey].words.map(w => w.word.toLowerCase()));
+      words.forEach(w => {
+        if (!existingWords.has(w.word.toLowerCase())) {
+          CATEGORIES[catKey].words.push(w);
+          existingWords.add(w.word.toLowerCase());
+        }
+      });
+    }
+  });
+} catch(e) {}
+
+function saveCustomWords(catKey, newWords) {
+  try {
+    const custom = JSON.parse(localStorage.getItem('vocabforge_custom') || '{}');
+    if (!custom[catKey]) custom[catKey] = [];
+    custom[catKey].push(...newWords);
+    localStorage.setItem('vocabforge_custom', JSON.stringify(custom));
+  } catch(e) {}
+}
+
+function showGeneratePanel() {
+  const panel = document.getElementById('generate-panel');
+  panel.classList.remove('hidden', 'anim-collapse');
+  panel.classList.add('anim-expand');
+  document.getElementById('gen-status').textContent = '';
+}
+function hideGeneratePanel() {
+  const panel = document.getElementById('generate-panel');
+  panel.classList.remove('anim-expand');
+  panel.classList.add('anim-collapse');
+  setTimeout(() => { panel.classList.add('hidden'); panel.classList.remove('anim-collapse'); }, 200);
+}
+
+async function generateWords() {
+  const catKey = document.getElementById('gen-category').value;
+  const topic = document.getElementById('gen-topic').value.trim();
+  const statusEl = document.getElementById('gen-status');
+  const cat = CATEGORIES[catKey];
+
+  const existingWords = cat.words.map(w => w.word).join(', ');
+  const topicHint = topic ? `Focus on this topic: "${topic}".` : '';
+
+  statusEl.innerHTML = '<span style="color:#E8A838">⏳ Generating new words...</span>';
+
+  try {
+    const genPrompt = `Generate exactly 5 new English vocabulary words for a "${cat.label}" category, useful for a marketing professional working in the US market. ${topicHint}
+
+DO NOT repeat any of these existing words: ${existingWords}
+
+Return ONLY a JSON array, no markdown, no backticks, no explanation. Each item must have exactly these fields:
+{"word":"...","phonetic":"/.../" ,"pos":"...","zh":"Chinese translation","definition":"Simple English definition","example":"A self-explaining example sentence where context makes the meaning obvious","synonyms":["syn1","syn2","syn3"]}
+
+Return ONLY the JSON array.`;
+
+    const text = (await callAI(genPrompt)).replace(/\`\`\`json|\`\`\`/g, '').trim();
+    const newWords = JSON.parse(text);
+
+    if (!Array.isArray(newWords) || newWords.length === 0) throw new Error('Invalid response');
+
+    // Validate and add
+    const existingSet = new Set(cat.words.map(w => w.word.toLowerCase()));
+    const added = [];
+    newWords.forEach(w => {
+      if (w.word && w.definition && !existingSet.has(w.word.toLowerCase())) {
+        // Ensure all fields exist
+        const clean = {
+          word: w.word,
+          phonetic: w.phonetic || '',
+          pos: w.pos || 'noun',
+          zh: w.zh || '',
+          definition: w.definition,
+          example: w.example || '',
+          synonyms: Array.isArray(w.synonyms) ? w.synonyms.slice(0,3) : []
+        };
+        cat.words.push(clean);
+        existingSet.add(clean.word.toLowerCase());
+        added.push(clean);
+      }
+    });
+
+    if (added.length > 0) {
+      saveCustomWords(catKey, added);
+      statusEl.innerHTML = `<span style="color:#3DBB6E">✓ Added ${added.length} new words to ${cat.label}!</span>`;
+      setTimeout(() => { hideGeneratePanel(); renderHome(); }, 1500);
+    } else {
+      statusEl.innerHTML = '<span style="color:#D94F4F">No new unique words generated. Try again.</span>';
+    }
+  } catch(e) {
+    console.error(e);
+    statusEl.innerHTML = '<span style="color:#D94F4F">Failed — check your API key in 🔑 AI Features below.</span>';
+  }
+}
+
+// ═══════════════════════════════════════
+// CATEGORY MANAGEMENT
+// ═══════════════════════════════════════
+// Load custom categories from localStorage
+try {
+  const savedCats = JSON.parse(localStorage.getItem('vocabforge_categories') || '{}');
+  Object.entries(savedCats).forEach(([key, cat]) => {
+    if (!CATEGORIES[key]) {
+      CATEGORIES[key] = cat;
+      CATEGORIES[key].custom = true;
+    }
+  });
+} catch(e) {}
+
+function saveCustomCategories() {
+  try {
+    const custom = {};
+    Object.entries(CATEGORIES).forEach(([key, cat]) => {
+      if (cat.custom) custom[key] = cat;
+    });
+    localStorage.setItem('vocabforge_categories', JSON.stringify(custom));
+  } catch(e) {}
+}
+
+function showCategoryManager() {
+  const panel = document.getElementById('cat-manager');
+  panel.classList.remove('hidden', 'anim-collapse');
+  panel.classList.add('anim-expand');
+  renderCategoryManager();
+}
+
+function hideCategoryManager() {
+  const panel = document.getElementById('cat-manager');
+  panel.classList.remove('anim-expand');
+  panel.classList.add('anim-collapse');
+  setTimeout(() => { panel.classList.add('hidden'); panel.classList.remove('anim-collapse'); }, 200);
+}
+
+function renderCategoryManager() {
+  const list = document.getElementById('cat-manager-list');
+  list.innerHTML = '';
+
+  Object.entries(CATEGORIES).forEach(([key, cat]) => {
+    const isCustom = !!cat.custom;
+    const rgb = hexToRgb(cat.color);
+    const div = document.createElement('div');
+    div.style.cssText = `display:flex;align-items:center;gap:10px;padding:12px;border-radius:12px;background:rgba(${rgb},0.06);border:1px solid rgba(${rgb},0.15)`;
+    div.innerHTML = `
+      <span style="font-size:24px">${cat.icon}</span>
+      <div style="flex:1">
+        <div style="font-weight:600;font-size:14px">${cat.label}</div>
+        <div style="font-size:12px;color:var(--text-secondary)">${cat.words.length} words${isCustom ? ' · Custom' : ' · Built-in'}</div>
+      </div>
+      <div style="display:flex;gap:6px">
+        <button class="btn btn-outline" style="font-size:11px;padding:4px 10px" onclick="editCategory('${key}')">✎</button>
+        <button class="btn" style="background:rgba(217,79,79,0.15);font-size:11px;padding:4px 10px;border:1px solid rgba(217,79,79,0.2);color:#D94F4F" onclick="deleteCategory('${key}')">✕</button>
+      </div>
+    `;
+    list.appendChild(div);
+  });
+}
+
+function createCategory() {
+  const icon = document.getElementById('new-cat-icon').value.trim() || '📝';
+  const name = document.getElementById('new-cat-name').value.trim();
+  const color = document.getElementById('new-cat-color').value;
+  const statusEl = document.getElementById('cat-manager-status');
+
+  if (!name) {
+    statusEl.innerHTML = '<span style="color:#D94F4F">Please enter a category name.</span>';
+    return;
+  }
+
+  // Generate a safe key
+  const key = 'custom_' + name.toLowerCase().replace(/[^a-z0-9]/g, '_').replace(/_+/g, '_');
+
+  if (CATEGORIES[key]) {
+    statusEl.innerHTML = '<span style="color:#D94F4F">A category with this name already exists.</span>';
+    return;
+  }
+
+  CATEGORIES[key] = {
+    label: name,
+    icon: icon,
+    color: color,
+    words: [],
+    custom: true
+  };
+
+  saveCustomCategories();
+
+  // Clear inputs
+  document.getElementById('new-cat-icon').value = '';
+  document.getElementById('new-cat-name').value = '';
+
+  statusEl.innerHTML = `<span style="color:#3DBB6E">✓ Created "${name}"! Use <b>+ New Words</b> to add vocabulary.</span>`;
+  renderCategoryManager();
+  renderHome();
+  updateGenSelect();
+}
+
+function editCategory(key) {
+  const cat = CATEGORIES[key];
+  if (!cat) return;
+
+  const newName = prompt('Category name:', cat.label);
+  if (newName === null) return;
+  if (newName.trim()) cat.label = newName.trim();
+
+  const newIcon = prompt('Emoji icon:', cat.icon);
+  if (newIcon !== null && newIcon.trim()) cat.icon = newIcon.trim();
+
+  const newColor = prompt('Color hex (e.g. #E07C24):', cat.color);
+  if (newColor !== null && /^#[0-9a-fA-F]{6}$/.test(newColor.trim())) cat.color = newColor.trim();
+
+  cat.custom = true;
+  saveCustomCategories();
+  renderHome();
+  updateGenSelect();
+
+  if (!document.getElementById('cat-manager').classList.contains('hidden')) {
+    renderCategoryManager();
+  }
+}
+
+function deleteCategory(key) {
+  const cat = CATEGORIES[key];
+  if (!cat) return;
+
+  if (Object.keys(CATEGORIES).length <= 1) {
+    alert('You need at least one category.');
+    return;
+  }
+
+  if (!confirm(`Delete "${cat.label}" and all its ${cat.words.length} words? This cannot be undone.`)) return;
+
+  // Remove scores for words in this category
+  cat.words.forEach(w => { delete scores[w.word]; });
+  saveScores();
+
+  // Remove from custom words storage too
+  try {
+    const custom = JSON.parse(localStorage.getItem('vocabforge_custom') || '{}');
+    delete custom[key];
+    localStorage.setItem('vocabforge_custom', JSON.stringify(custom));
+  } catch(e) {}
+
+  delete CATEGORIES[key];
+  saveCustomCategories();
+  // Track deleted built-in keys so they don't reload on refresh
+  try {
+    const deleted = JSON.parse(localStorage.getItem('vocabforge_deleted') || '[]');
+    if (!deleted.includes(key)) deleted.push(key);
+    localStorage.setItem('vocabforge_deleted', JSON.stringify(deleted));
+  } catch(e) {}
+
+  renderCategoryManager();
+  renderHome();
+  updateGenSelect();
+}
+
+function updateGenSelect() {
+  const select = document.getElementById('gen-category');
+  select.innerHTML = '';
+  Object.entries(CATEGORIES).forEach(([key, cat]) => {
+    const opt = document.createElement('option');
+    opt.value = key;
+    opt.textContent = `${cat.icon} ${cat.label}`;
+    select.appendChild(opt);
+  });
+}
+
+// ═══════════════════════════════════════
+// AI COACH PANEL (Homepage entry)
+// ═══════════════════════════════════════
+function toggleCoachPanel() {
+  const opened = animateToggle('coach-panel', 'coach-arrow');
+  if (opened) renderCoachPanel();
+}
+
+function renderCoachPanel() {
+  const el = document.getElementById('coach-content');
+  const profile = getLearnerProfile();
+  const history = getSessionHistory();
+  const insights = getInsights();
+
+  if (!profile || history.length === 0) {
+    el.innerHTML = `
+      <div style="text-align:center;padding:20px 0">
+        <div style="font-size:36px;margin-bottom:12px">📊</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:6px">No data yet</div>
+        <div style="color:var(--text-secondary);font-size:13px">Complete a flashcard deck or quiz to unlock your learning profile and personalized tips.</div>
+      </div>`;
+    return;
+  }
+
+  // Build profile stats
+  const accuracyColor = profile.overallAccuracy >= 80 ? '#3DBB6E' : profile.overallAccuracy >= 60 ? '#E8A838' : '#D94F4F';
+
+  let profileHtml = `
+    <div style="font-size:13px;font-weight:700;color:#9B59B6;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">Your Learning Profile</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px;border-radius:12px;background:rgba(155,89,182,0.08)">
+        <div style="font-size:22px;font-weight:800;color:#9B59B6">${profile.totalSessions}</div>
+        <div style="font-size:11px;color:var(--text-secondary)">Sessions</div>
+      </div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px;border-radius:12px;background:rgba(${accuracyColor === '#3DBB6E' ? '61,187,110' : accuracyColor === '#E8A838' ? '232,168,56' : '217,79,79'},0.08)">
+        <div style="font-size:22px;font-weight:800;color:${accuracyColor}">${profile.overallAccuracy}%</div>
+        <div style="font-size:11px;color:var(--text-secondary)">Accuracy</div>
+      </div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px;border-radius:12px;background:rgba(79,155,217,0.08)">
+        <div style="font-size:22px;font-weight:800;color:#4F9BD9">${profile.avgTimeOverall}s</div>
+        <div style="font-size:11px;color:var(--text-secondary)">Avg/Card</div>
+      </div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px;border-radius:12px;background:rgba(232,168,56,0.08)">
+        <div style="font-size:22px;font-weight:800;color:#E8A838">${profile.totalCards}</div>
+        <div style="font-size:11px;color:var(--text-secondary)">Cards Done</div>
+      </div>
+    </div>`;
+
+  // Trouble words
+  if (profile.repeatStruggle.length > 0) {
+    profileHtml += `
+      <div style="margin-bottom:16px;padding:12px;border-radius:12px;background:rgba(217,79,79,0.06);border:1px solid rgba(217,79,79,0.12)">
+        <div style="font-size:12px;font-weight:600;color:#D94F4F;margin-bottom:6px">🔴 Repeat Trouble Words</div>
+        <div style="font-size:13px;color:var(--text-defn)">${profile.repeatStruggle.join(', ')}</div>
+        <div style="font-size:11px;color:var(--text-secondary);margin-top:4px">These words came up as "Still Learning" across multiple sessions.</div>
+      </div>`;
+  }
+
+  // Most studied category
+  profileHtml += `
+    <div style="margin-bottom:16px;font-size:13px;color:var(--text-defn)">
+      <span style="font-weight:600">Most studied:</span> ${profile.favCategory}
+    </div>`;
+
+  // Latest AI insight
+  if (insights.length > 0) {
+    const latest = insights[insights.length - 1];
+    const date = new Date(latest.date);
+    const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    profileHtml += `
+      <div style="padding:14px;border-radius:12px;background:rgba(155,89,182,0.06);border:1px solid rgba(155,89,182,0.12);margin-bottom:14px">
+        <div style="font-size:12px;font-weight:600;color:#9B59B6;margin-bottom:6px">💡 Latest AI Insight <span style="font-weight:400;color:var(--text-secondary)">(${dateStr})</span></div>
+        <div style="font-size:13px;color:var(--text-defn);line-height:1.6">${latest.text.replace(/\n/g, '<br>')}</div>
+      </div>`;
+  }
+
+  // Ask AI for fresh advice button
+  profileHtml += `
+    <div style="text-align:center">
+      <button class="btn" style="background:rgba(155,89,182,0.7);font-size:13px;padding:10px 24px" onclick="askCoachNow()">🧠 Get Fresh Advice</button>
+      <div id="coach-ai-status" style="margin-top:8px;font-size:13px;color:var(--text-secondary)"></div>
+    </div>`;
+
+  el.innerHTML = profileHtml;
+}
+
+function getInsights() {
+  try { return JSON.parse(localStorage.getItem('vocabforge_insights') || '[]'); } catch(e) { return []; }
+}
+
+async function askCoachNow() {
+  const statusEl = document.getElementById('coach-ai-status');
+  statusEl.innerHTML = '<span style="color:#E8A838">⏳ Thinking...</span>';
+
+  const profile = getLearnerProfile();
+  if (!profile) {
+    statusEl.innerHTML = '<span style="color:#D94F4F">No learning data yet. Complete a session first.</span>';
+    return;
+  }
+
+  // Gather all scores for context
+  const allWords = Object.values(CATEGORIES).flatMap(c => c.words);
+  const masteredList = allWords.filter(w => (scores[w.word]||0) >= 5).map(w => w.word);
+  const learningList = allWords.filter(w => { const s = scores[w.word]||0; return s > 0 && s < 5; }).map(w => w.word + ' (' + (scores[w.word]||0) + 'pts)');
+
+  try {
+    const coachPrompt = `You are a language learning coach for a Chinese-speaking marketing professional learning English. Give a brief personalized check-in based on their overall profile.
+
+PROFILE:
+- Total sessions: ${profile.totalSessions}
+- Overall accuracy: ${profile.overallAccuracy}%
+- Average time per card: ${profile.avgTimeOverall}s
+- Total cards reviewed: ${profile.totalCards}
+- Most studied category: ${profile.favCategory}
+- Repeat trouble words: ${profile.repeatStruggle.join(', ') || 'none'}
+- Mastered words: ${masteredList.join(', ') || 'none'}
+- In progress: ${learningList.join(', ') || 'none'}
+
+Give advice in this format (simple English, under 120 words, no markdown asterisks):
+1. Overall assessment (1-2 sentences — how are they doing?)
+2. What to focus on next (1-2 specific suggestions)
+3. One memory trick for a trouble word (if any)
+
+Be encouraging but honest.`;
+
+    const text = await callAI(coachPrompt);
+
+    if (text) {
+      saveInsight(text);
+      statusEl.innerHTML = '';
+      renderCoachPanel();
+    } else {
+      statusEl.innerHTML = '<span style="color:#D94F4F">No response — check your API key in 🔑 AI Features below.</span>';
+    }
+  } catch(e) {
+    console.error(e);
+    statusEl.innerHTML = '<span style="color:#D94F4F">Connection failed — check your API key in 🔑 AI Features below.</span>';
+  }
+}
+
+// ═══════════════════════════════════════
+// SCENE-BASED CATEGORY GENERATOR
+// ═══════════════════════════════════════
+function toggleScenePanel() {
+  animateToggle('scene-panel', 'scene-arrow');
+}
+
+function pickScene(name, icon, description) {
+  document.getElementById('scene-custom').value = '';
+  generateSceneCategory(name, icon, description);
+}
+
+function generateScene() {
+  const input = document.getElementById('scene-custom').value.trim();
+  if (!input) {
+    document.getElementById('scene-status').innerHTML = '<span style="color:#D94F4F">Describe a scene first, or pick one above.</span>';
+    return;
+  }
+  generateSceneCategory(input, '📝', input);
+}
+
+async function generateSceneCategory(sceneName, icon, description) {
+  const statusEl = document.getElementById('scene-status');
+  statusEl.innerHTML = '<span style="color:#E8A838">⏳ AI is building your category and words...</span>';
+
+  // Generate a safe key
+  const key = 'scene_' + sceneName.toLowerCase().replace(/[^a-z0-9]/g, '_').replace(/_+/g, '_');
+
+  // Check if already exists
+  if (CATEGORIES[key]) {
+    statusEl.innerHTML = `<span style="color:#4F9BD9">Category "${sceneName}" already exists! Scroll down to find it.</span>`;
+    return;
+  }
+
+  // Pick a color from a palette
+  const colors = ['#E8A838','#D94F4F','#4F9BD9','#9B59B6','#3DBB6E','#E07C24','#2ECC71','#E74C3C'];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+
+  try {
+    const scenePrompt = `Generate 10 essential English vocabulary words for this scene: "${sceneName}" (${description}).
+
+Target user: a Chinese-speaking marketing professional working in the US.
+The words should be the most useful, practical words/phrases for this specific scene.
+
+Return ONLY a JSON array, no markdown, no backticks. Each item must have exactly these fields:
+{"word":"...","phonetic":"/.../" ,"pos":"...","zh":"Chinese translation","definition":"Simple English definition","example":"A self-explaining example sentence where the context makes the word's meaning obvious — include a brief clarification after a dash","synonyms":["syn1","syn2","syn3"]}
+
+Return ONLY the JSON array.`;
+
+    const text = (await callAI(scenePrompt, 2000)).replace(/\`\`\`json|\`\`\`/g, '').trim();
+    const words = JSON.parse(text);
+
+    if (!Array.isArray(words) || words.length === 0) throw new Error('Invalid response');
+
+    // Clean and validate words
+    const cleanWords = words.filter(w => w.word && w.definition).map(w => ({
+      word: w.word,
+      phonetic: w.phonetic || '',
+      pos: w.pos || 'noun',
+      zh: w.zh || '',
+      definition: w.definition,
+      example: w.example || '',
+      synonyms: Array.isArray(w.synonyms) ? w.synonyms.slice(0, 3) : []
+    }));
+
+    if (cleanWords.length === 0) throw new Error('No valid words');
+
+    // Create the category
+    CATEGORIES[key] = {
+      label: sceneName,
+      icon: icon,
+      color: color,
+      words: cleanWords,
+      custom: true
+    };
+
+    saveCustomCategories();
+    saveCustomWords(key, cleanWords);
+    updateGenSelect();
+    renderHome();
+
+    statusEl.innerHTML = `<span style="color:#3DBB6E">✓ Created "${sceneName}" with ${cleanWords.length} words! Scroll down to start learning.</span>`;
+    setTimeout(() => {
+      const sp = document.getElementById('scene-panel');
+      sp.classList.remove('anim-expand');
+      sp.classList.add('anim-collapse');
+      document.getElementById('scene-arrow').style.transform = 'rotate(0deg)';
+      setTimeout(() => { sp.classList.add('hidden'); sp.classList.remove('anim-collapse'); statusEl.textContent = ''; }, 200);
+    }, 2500);
+
+  } catch(e) {
+    console.error(e);
+    statusEl.innerHTML = '<span style="color:#D94F4F">Failed — check your API key in 🔑 AI Features below.</span>';
+  }
+}
+
+// ═══════════════════════════════════════
+// USER GUIDE TOGGLE
+// ═══════════════════════════════════════
+function toggleGuide() {
+  animateToggle('guide-content', 'guide-arrow');
+}
+
+// ═══════════════════════════════════════
+// DATA BACKUP: EXPORT / IMPORT / RESET
+// ═══════════════════════════════════════
+function exportData() {
+  const statusEl = document.getElementById('backup-status');
+  try {
+    const data = {
+      version: 2,
+      exportDate: new Date().toISOString(),
+      scores: JSON.parse(localStorage.getItem('vocabforge_scores') || '{}'),
+      history: JSON.parse(localStorage.getItem('vocabforge_history') || '[]'),
+      insights: JSON.parse(localStorage.getItem('vocabforge_insights') || '[]'),
+      categories: JSON.parse(localStorage.getItem('vocabforge_categories') || '{}'),
+      custom: JSON.parse(localStorage.getItem('vocabforge_custom') || '{}'),
+      deleted: JSON.parse(localStorage.getItem('vocabforge_deleted') || '[]'),
+      theme: localStorage.getItem('vocabforge_theme') || 'dark'
+    };
+
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    const date = new Date().toISOString().slice(0, 10);
+    a.download = `vocabforge-backup-${date}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    statusEl.innerHTML = '<span style="color:#3DBB6E">✓ Exported! Check your downloads folder.</span>';
+    setTimeout(() => { statusEl.textContent = ''; }, 3000);
+  } catch(e) {
+    console.error(e);
+    statusEl.innerHTML = '<span style="color:#D94F4F">Export failed.</span>';
+  }
+}
+
+function importData(event) {
+  const statusEl = document.getElementById('backup-status');
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+
+      // Validate it's a VocabForge backup
+      if (!data.scores || typeof data.scores !== 'object') {
+        throw new Error('Invalid backup file');
+      }
+
+      if (!confirm(`Import backup from ${data.exportDate ? new Date(data.exportDate).toLocaleDateString() : 'unknown date'}? This will replace all current data.`)) {
+        event.target.value = '';
+        return;
+      }
+
+      // Restore all data
+      if (data.scores) localStorage.setItem('vocabforge_scores', JSON.stringify(data.scores));
+      if (data.history) localStorage.setItem('vocabforge_history', JSON.stringify(data.history));
+      if (data.insights) localStorage.setItem('vocabforge_insights', JSON.stringify(data.insights));
+      if (data.categories) localStorage.setItem('vocabforge_categories', JSON.stringify(data.categories));
+      if (data.custom) localStorage.setItem('vocabforge_custom', JSON.stringify(data.custom));
+      if (data.deleted) localStorage.setItem('vocabforge_deleted', JSON.stringify(data.deleted));
+      if (data.theme) localStorage.setItem('vocabforge_theme', data.theme);
+
+      statusEl.innerHTML = '<span style="color:#3DBB6E">✓ Imported! Reloading...</span>';
+      setTimeout(() => { location.reload(); }, 1000);
+    } catch(e) {
+      console.error(e);
+      statusEl.innerHTML = '<span style="color:#D94F4F">Invalid file. Please use a VocabForge backup.</span>';
+    }
+    event.target.value = '';
+  };
+  reader.readAsText(file);
+}
+
+function resetAllData() {
+  if (!confirm('Delete ALL your progress, categories, and history? This cannot be undone.')) return;
+  if (!confirm('Are you really sure? All mastery scores, custom categories, and AI insights will be lost forever.')) return;
+
+  ['vocabforge_scores','vocabforge_history','vocabforge_insights','vocabforge_categories','vocabforge_custom','vocabforge_deleted','vocabforge_theme','vocabforge_apikey'].forEach(key => {
+    localStorage.removeItem(key);
+  });
+
+  location.reload();
+}
+
+// ═══════════════════════════════════════
+// APPEARANCE / THEME
+// ═══════════════════════════════════════
+function setTheme(mode) {
+  localStorage.setItem('vocabforge_theme', mode);
+  applyTheme(mode);
+}
+
+function applyTheme(mode) {
+  // Update button states
+  document.getElementById('theme-auto').classList.toggle('active', mode === 'auto');
+  document.getElementById('theme-light').classList.toggle('active', mode === 'light');
+  document.getElementById('theme-dark').classList.toggle('active', mode === 'dark');
+
+  if (mode === 'light') {
+    document.body.classList.add('light');
+  } else if (mode === 'dark') {
+    document.body.classList.remove('light');
+  } else {
+    // Auto: follow system preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.body.classList.toggle('light', !prefersDark);
+  }
+
+  // Update meta theme-color for mobile
+  const isLight = document.body.classList.contains('light');
+  document.querySelector('meta[name="theme-color"]').content = isLight ? '#F5F5F7' : '#0D0D0D';
+}
+
+// Listen for system theme changes when in auto mode
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  const saved = localStorage.getItem('vocabforge_theme') || 'dark';
+  if (saved === 'auto') applyTheme('auto');
+});
+
+// ═══════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════
+// Apply saved theme
+const savedTheme = localStorage.getItem('vocabforge_theme') || 'dark';
+applyTheme(savedTheme);
+// Remove built-in categories that user previously deleted
+try {
+  const deleted = JSON.parse(localStorage.getItem('vocabforge_deleted') || '[]');
+  deleted.forEach(key => { delete CATEGORIES[key]; });
+} catch(e) {}
+
+updateGenSelect();
+initApiKeyUI();
+renderHome();
+
+// ═══════════════════════════════════════
+// SERVICE WORKER (offline support)
+// ═══════════════════════════════════════
+if ('serviceWorker' in navigator) {
+  // Create a minimal service worker inline via blob
+  const swCode = `
+    const CACHE = 'vocabforge-v1';
+    const ASSETS = ['./', self.location.href];
+    self.addEventListener('install', e => {
+      e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
+      self.skipWaiting();
+    });
+    self.addEventListener('activate', e => {
+      e.waitUntil(caches.keys().then(keys =>
+        Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
+      ));
+      self.clients.claim();
+    });
+    self.addEventListener('fetch', e => {
+      e.respondWith(
+        fetch(e.request).then(r => {
+          const clone = r.clone();
+          caches.open(CACHE).then(c => c.put(e.request, clone));
+          return r;
+        }).catch(() => caches.match(e.request))
+      );
+    });
+  `;
+  const blob = new Blob([swCode], { type: 'application/javascript' });
+  const swUrl = URL.createObjectURL(blob);
+  navigator.serviceWorker.register(swUrl).catch(() => {});
+}
+</script>
+</body>
+</html>
